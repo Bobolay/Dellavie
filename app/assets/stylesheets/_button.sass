@@ -1,0 +1,27 @@
+.button
+  width: 220px
+  height: 54px
+  display: inline-block
+  border: 2px solid $orange
+  overflow: hidden
+  position: relative
+  z-index: 1
+  span
+    text-transform: uppercase
+    color: $orange
+    letter-spacing: 2px
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 100%
+    +translate(-50%,-50%)
+  .line-left, .line-right
+    position: absolute
+    height: 100%
+    width: 1px
+    background-color: $orange
+    top: 0
+  .line-left
+    left: 20px
+  .line-right
+    right: 20px
