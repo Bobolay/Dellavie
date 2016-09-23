@@ -114,10 +114,12 @@
     margin-top: 50px
     @media #{$medium-only}
       margin-top: 100px
-    @media #{$large-only}
+    @media #{$large-up}
       margin-left: 50px
     @media #{$xlarge-up}
       margin-top: 200px
+    @media #{$xxlarge-up}
+      margin-left: 0
     p
       font-size: 3em
       +marck
@@ -153,6 +155,9 @@
 
 .feedback-container
   padding: 100px 0
+  overflow: hidden
+  @media #{$xlarge-up}
+    padding: 100px 0 50px
   .feedback-container-header
     text-align: center
     color: $orange
@@ -161,15 +166,23 @@
       font-size: 72px
       letter-spacing: 3px
       line-height: 1
+      @media #{$small-only}
+        font-size: 36px
     .header
       font-weight: bold
       font-size: 72px
       text-transform: uppercase
       line-height: 1
       letter-spacing: 3px
+      @media #{$small-only}
+        font-size: 36px
   .slider-container
     position: relative
-    padding: 200px 0 100px
+    padding: 200px 0 250px
+    @media #{$small-only}
+      padding: 50px 0 250px
+    @media #{$medium-only}
+      padding: 200px 0 250px
     .left-arrow-container, .right-arrow-container
       width: 26px
       height: 20px
@@ -179,24 +192,33 @@
       +transition(0.25s)
       +animation-timing-function(cubic-bezier(0.645, 0.045, 0.355, 1))
       cursor: pointer
+      @media #{$small-only}
+        top: 150px
       &:hover
         width: 52px
     .left-arrow-container
       left: -20px
       text-align: left
-      &:hover
-        +translate(-25%,0)
+      @media #{$small-only}
+        left: 5px
+      @media #{$large-up}
+        &:hover
+          +translate(-25%,0)
     .right-arrow-container
       right: -20px
       text-align: right
-      &:hover
-        +translate(25%,0)
+      @media #{$small-only}
+        right: 5px
+      @media #{$large-up}
+        &:hover
+          +translate(25%,0)
 
     #bx-pager
       position: absolute
       left: 50%
       +translate(-50%,0)
-      bottom: 30px
+      bottom: 200px
+      z-index: 102
       .pager-square
         width: 8px
         height: 8px
@@ -219,9 +241,13 @@
     .slider-1
       height: 500px
       position: relative
+      @media #{$small-only}
+        height: 200px
     .slider-2
       height: 500px
       position: relative
+      @media #{$small-only}
+        height: 400px
     .feedback-1
       background-color: $orange
     .feedback-2
@@ -250,6 +276,8 @@
         width: 300px
         margin-top: 100px
         position: relative
+        @media #{$small-only}
+          max-width: 80%
         &:before, &:after
           +marck
           position: absolute
@@ -274,3 +302,28 @@
             font-size: 200px
             bottom: -40px
             right: 0
+    .yami-yam-img
+      position: absolute
+      z-index: 101
+      @media #{$small-only}
+        left: 50%
+        +translate(-50%,0)
+        bottom: -80px
+        width: 280px
+        height: 280px
+      @media #{$medium-only}
+        left: 50%
+        +translate(-50%,0)
+        bottom: -80px
+        width: 320px
+        height: 320px
+      @media #{$large-only}
+        width: 320px
+        height: 320px
+        right: -180px
+        bottom: -100px
+      @media #{$xlarge-up}
+        width: 500px
+        height: 500px
+        right: -350px
+        bottom: -50px
