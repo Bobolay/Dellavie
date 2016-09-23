@@ -169,7 +169,53 @@
       letter-spacing: 3px
   .slider-container
     position: relative
-    padding: 200px 0
+    padding: 200px 0 100px
+    .left-arrow-container, .right-arrow-container
+      width: 26px
+      height: 20px
+      position: absolute
+      top: 50%
+      z-index: 100
+      +transition(0.25s)
+      +animation-timing-function(cubic-bezier(0.645, 0.045, 0.355, 1))
+      cursor: pointer
+      &:hover
+        width: 52px
+    .left-arrow-container
+      left: -20px
+      text-align: left
+      &:hover
+        +translate(-25%,0)
+    .right-arrow-container
+      right: -20px
+      text-align: right
+      &:hover
+        +translate(25%,0)
+
+    #bx-pager
+      position: absolute
+      left: 50%
+      +translate(-50%,0)
+      bottom: 30px
+      .pager-square
+        width: 8px
+        height: 8px
+        border: 1px solid white
+        margin: 8px
+        display: inline-block
+        &[data-slide-index="0"]
+          &.active
+            background-color: $orange
+            border: 1px solid $orange
+        &[data-slide-index="1"]
+          &.active
+            background-color: $aqua
+            border: 1px solid $aqua
+        &[data-slide-index="2"]
+          &.active
+            background-color: $violet
+            border: 1px solid $violet
+
     .slider-1
       height: 500px
       position: relative
