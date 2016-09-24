@@ -333,6 +333,8 @@
   position: relative
   overflow: hidden
   padding: 80px 0
+  @media #{$small-only}
+    height: auto
   .bg-img
     left: 0
     top: 0
@@ -403,3 +405,32 @@
       +bold
       text-transform: uppercase
       margin-bottom: 10px
+
+  .footer
+    +clearfix
+    position: absolute
+    bottom: 0
+    width: 100%
+    font-size: 12px
+    line-height: 50px
+    color: $grey
+    .v-studio
+      float: left
+      svg
+        fill: $grey
+        width: 25px
+        display: inline-block
+        margin-right: 15px
+        position: relative
+        top: 5px
+        +transition(0.5s)
+      a
+        display: inline-block
+        @media #{$small-only}
+          display: none
+      &:hover
+        color: $orange
+        svg
+          fill: $orange
+    .dellavie
+      float: right

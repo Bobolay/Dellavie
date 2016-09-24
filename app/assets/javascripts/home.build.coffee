@@ -5,6 +5,8 @@
 #= require appear-initialize
 
 #= require plugins/delay
+#= require plugins/global
+#= require plugins/clickout
 
 #= require form
 
