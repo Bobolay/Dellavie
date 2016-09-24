@@ -115,3 +115,60 @@
               p.author
                 | roman kaminechny, 
                 span Square-Designer
+
+.contact-us-container
+  .bg-img style="background-image: url(#{asset_path('photo/Dellavie-footer-bg.jpg')})"
+  .contact-us-header
+    .header coffee dellavie
+    .subheader Is an essential attribute of a meeting and a good mood for the whole day!
+  .row
+    .small-11.medium-11.large-8.small-centered.columns
+      .row.collapse
+        .large-6.medium-6.small-12.columns.contact-info
+          .background-svg= inline_svg "svg/Dellavie-logo-symbol.svg"
+          .logo = inline_svg "svg/Dellavie-logo.svg"
+          .address
+            p.upper-bold “Triumph-Torg”
+            p.regular
+              | 42/97 Vetnadskiy str,
+              br
+              | Lviv, 79049, Ukraine
+          .social-links-container
+            a = inline_svg "svg/Dellavie-social-facebook.svg"
+            a = inline_svg "svg/Dellavie-social-g+.svg"
+            a = inline_svg "svg/Dellavie-social-twitter.svg"
+          p.phone +38 (096) 845-98-68
+          p.email triumpf.torg.sale@gmail.com
+        .large-6.medium-6.small-12.columns.form-container
+          p.header make order
+          form
+            .select-label you are...
+            .select-field
+              p Coffee house owner
+              span = inline_svg "svg/select-arrow.svg"
+              .select-block
+                .option Coffee house owner
+                .option Shop owner
+                .option Office coffee lover
+                .option Home coffee lover
+                .option Other
+            .group
+              input type="text"
+              span.bar
+              label name
+            .group
+              input type="text"
+              span.bar
+              label email
+            .group
+              input type="text"
+              span.bar
+              label phone number
+            .group
+              textarea rows="2"
+              span.bar
+              label message
+            button.button type="submit"
+              span order
+              .line-left
+              .line-right

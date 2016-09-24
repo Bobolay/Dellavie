@@ -6,7 +6,11 @@
 
 #= require plugins/delay
 
+#= require form
+
 #= require plugins/jquery.bxslider
 #= require bxslider
 
 #= require custom-scroll
+
+#= require select

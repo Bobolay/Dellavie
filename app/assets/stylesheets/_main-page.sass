@@ -187,7 +187,7 @@
       width: 26px
       height: 20px
       position: absolute
-      top: 50%
+      top: 440px
       z-index: 100
       +transition(0.25s)
       +animation-timing-function(cubic-bezier(0.645, 0.045, 0.355, 1))
@@ -321,9 +321,85 @@
         width: 320px
         height: 320px
         right: -180px
-        bottom: -100px
+        bottom: 60px
       @media #{$xlarge-up}
         width: 500px
         height: 500px
         right: -350px
         bottom: -50px
+
+.contact-us-container
+  height: 100vh
+  position: relative
+  overflow: hidden
+  padding: 80px 0
+  .bg-img
+    left: 0
+    top: 0
+  .contact-us-header
+    text-align: center
+    color: white
+    position: relative
+    margin-bottom: 50px
+    .subheader
+      +marck
+      font-size: 24px
+      letter-spacing: 1px
+      line-height: 1.5
+      display: inline-block
+      max-width: 670px
+      @media #{$small-only}
+        font-size: 20px
+        max-width: 280px
+    .header
+      +bold
+      font-size: 36px
+      text-transform: uppercase
+      line-height: 2
+      letter-spacing: 1px
+      @media #{$small-only}
+        font-size: 32px
+  .contact-info, .form-container
+    padding: 50px 0
+    position: relative
+    z-index: 1
+    height: 600px
+  .contact-info
+    background-color: $brown
+    overflow: hidden
+    text-align: center
+    position: relative
+    color: white
+    letter-spacing: 1px
+    .background-svg
+      fill: white
+      opacity: 0.1
+      width: 300px
+      position: absolute
+    .logo
+      svg
+        width: 130px
+    .address
+      margin-top: 90px
+      .upper-bold
+        text-transform: uppercase
+        +bold
+        margin-bottom: 16px
+    .social-links-container
+      margin-top: 90px
+      margin-bottom: 20px
+    .phone
+      font-weight: bold
+      margin-bottom: 10px
+    .email
+      color: $orange
+  .form-container
+    background-color: white
+    .header
+      color: $orange
+      text-align: center
+      font-size: 36px
+      line-height: 1
+      +bold
+      text-transform: uppercase
+      margin-bottom: 10px
