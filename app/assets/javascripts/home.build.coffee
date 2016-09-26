@@ -16,3 +16,5 @@
 #= require custom-scroll
 
 #= require select
+
+#= require popup

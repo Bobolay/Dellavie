@@ -1,15 +1,29 @@
 .full-page-container
   .page-section.first
     = render 'banner_outer'
-    .bg-img style="background-image: url(#{asset_path('banners/dellavie-banner-bg-1')})"
+    .bg-img style="background-image: url(#{asset_path('banners/dellavie-banner-bg-1.jpg')})"
     = render 'banner_inner'
+    
+    .popup-background
+    .coffee-sort-popup
+      .close-popup = inline_svg "svg/Dellavie-plus.svg"
+      .popup-img
+        .bg-img style="background-image: url(#{asset_path('photo/slider-photo-1.jpg')})"
+        .left-arrow-container.slider-prev
+          = inline_svg "svg/left-arrow.svg"
+        .right-arrow-container.slider-next
+          = inline_svg "svg/right-arrow.svg"
+      .text
+        p.header arabica brazil santos
+        p.regular Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente iusto, ducimus ullam eaque dolore architecto ad consequatur quia enim, quaerat, assumenda, perspiciatis illo modi autem amet ut! Quae, unde, explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente iusto, ducimus ullam eaque dolore architecto ad consequatur quia enim, quaerat, assumenda, perspiciatis illo modi autem amet ut! Quae, unde, explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente iusto, ducimus ullam eaque dolore architecto ad consequatur quia enim, quaerat, assumenda, perspiciatis illo modi autem amet ut! Quae, unde, explicabo.
+
   .page-section.second
     = render 'banner_outer'
-    .bg-img style="background-image: url(#{asset_path('banners/dellavie-banner-bg-2')})"
+    .bg-img style="background-image: url(#{asset_path('banners/dellavie-banner-bg-2.jpg')})"
     = render 'banner_inner'
   .page-section.third
     = render 'banner_outer'
-    .bg-img style="background-image: url(#{asset_path('banners/dellavie-banner-bg-3')})"
+    .bg-img style="background-image: url(#{asset_path('banners/dellavie-banner-bg-3.jpg')})"
     = render 'banner_inner'
 .dark-bg.about-us
   .about-us-header
@@ -125,7 +139,7 @@
     .small-11.medium-11.large-8.small-centered.columns
       .row.collapse
         .large-6.medium-6.small-12.columns.contact-info
-          .background-svg= inline_svg "svg/Dellavie-logo-symbol.svg"
+          .background-svg style="background-image: url(#{asset_path('svg/Dellavie-D-letter.svg')})"
           .logo = inline_svg "svg/Dellavie-logo.svg"
           .address
             p.upper-bold “Triumph-Torg”

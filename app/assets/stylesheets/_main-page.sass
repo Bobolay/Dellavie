@@ -332,7 +332,7 @@
   height: 100vh
   position: relative
   overflow: hidden
-  padding: 80px 0
+  padding: 50px 0
   @media #{$small-only}
     height: auto
   .bg-img
@@ -374,26 +374,35 @@
     color: white
     letter-spacing: 1px
     .background-svg
-      fill: white
-      opacity: 0.1
-      width: 300px
+      width: 100%
+      height: 100%
       position: absolute
+      +scale(1.6)
+      top: 15%
+      left: -10%
+      background-color: $brown
+      background-blend-mode: overlay
     .logo
+      position: relative
       svg
         width: 130px
     .address
+      position: relative
       margin-top: 90px
       .upper-bold
         text-transform: uppercase
         +bold
         margin-bottom: 16px
     .social-links-container
+      position: relative
       margin-top: 90px
       margin-bottom: 20px
     .phone
+      position: relative
       font-weight: bold
       margin-bottom: 10px
     .email
+      position: relative
       color: $orange
   .form-container
     background-color: white
