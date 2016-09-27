@@ -13,7 +13,8 @@
 #= require plugins/jquery.bxslider
 #= require bxslider
 
-#= require custom-scroll
+#= require custom_scroll
+#= require detect_scroll
 
 #= require select
 

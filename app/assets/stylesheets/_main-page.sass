@@ -2,13 +2,18 @@
   color: white
   .page-section
     position: relative
-    height: 0
     height: 100vh
+    max-height: 0
     overflow: hidden
     +transition(1s)
-    +transition-property(height)
+    +transition-property(max-height)
+    &.auto-height
+      height: auto
     &.active
-      // height: 100vh
+      max-height: 100vh
+    &:last-child.active
+      max-height: 20000px
+
   .first
   .second
   .third
