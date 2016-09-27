@@ -2,6 +2,8 @@ form
   margin: 0 50px
   @media #{$small-only}
     margin: 0 20px
+  @media #{$landscape}
+    margin: 0 30px
   .select-label
     text-transform: uppercase
     color: $grey
@@ -122,3 +124,7 @@ form
     left: 50%
     bottom: 60px
     +translate(-50%,0)
+    @media #{$small-only}
+      position: relative
+      bottom: 0
+      margin-top: 50px
