@@ -87,6 +87,8 @@
       background-color: black
     @media #{$small-only}
       right: -20px
+    @media #{$medium-only}
+      right: -20px
   
   .go-down
     position: absolute
@@ -115,11 +117,13 @@
 
   .pager
     position: absolute
-    bottom: 0
+    bottom: -30px
     right: 10px
     width: 50px
     height: 100px
     +marck
+    @media #{$medium-only}
+      right: -10px
     .current-number
       position: absolute
       top: 0

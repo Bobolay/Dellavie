@@ -1,0 +1,70 @@
+.banner-outer
+  .logo = inline_svg "svg/Dellavie-logo-symbol.svg"
+  .social-links-container
+    a = inline_svg "svg/Dellavie-social-facebook.svg"
+    a = inline_svg "svg/Dellavie-social-g+.svg"
+    a = inline_svg "svg/Dellavie-social-twitter.svg"
+  .choose-language
+    p uk
+    .line
+  .slide-navigation
+    .square.active
+    .square
+    .square
+    .square-black
+  a.go-down
+    p about
+    = inline_svg "svg/Dellavie-arrow.svg"
+  .pager
+    .current-number 1
+    .slash &#47;
+    .total-number 3
+.bg-img style="background-image: url(#{asset_path('banners/dellavie-banner-bg-1.jpg')})"
+.row.banner-inner
+  .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
+    .banner-inner-header
+      p exclusif
+      span.top-title Coffe
+      = inline_svg "svg/Dellavie-Logo-text.svg"
+    .row.more-info
+      .large-6.medium-6.small-12.columns.coffee-img-container
+        img.coffee-img src=asset_path('photo/Dellavie-package-exclisif.png')
+      .large-6.medium-6.small-12.columns.countries-container
+        p.title Is a blend of
+        .row
+          .large-4.medium-4.small-4.columns.country
+            .country-map = inline_svg "svg/Dellavie-countries-Brasil.svg"
+            p.coffee-sort
+              | Arabica
+              br
+              | Brazil
+            .plus
+              = inline_svg "svg/Dellavie-plus.svg"
+          .large-4.medium-4.small-4.columns.country
+            .country-map = inline_svg "svg/Dellavie-countries-Colombia.svg"
+            p.coffee-sort
+              | Arabica
+              br
+              | Colombia Excelso
+            .plus
+              = inline_svg "svg/Dellavie-plus.svg"
+          .large-4.medium-4.small-4.columns.country
+            .country-map = inline_svg "svg/Dellavie-countries-Ephiopia.svg"
+            p.coffee-sort
+              | Arabica
+              br
+              | Ethiopia
+            .plus
+              = inline_svg "svg/Dellavie-plus.svg"
+.popup-background
+.coffee-sort-popup
+  .close-popup = inline_svg "svg/Dellavie-close.svg"
+  .popup-img
+    .bg-img style="background-image: url(#{asset_path('photo/slider-photo-1.jpg')})"
+    .left-arrow-container.slider-prev
+      = inline_svg "svg/left-arrow.svg"
+    .right-arrow-container.slider-next
+      = inline_svg "svg/right-arrow.svg"
+  .text
+    p.header arabica brazil santos
+    p.regular Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente iusto, ducimus ullam eaque dolore architecto ad consequatur quia enim, quaerat, assumenda, perspiciatis illo modi autem amet ut! Quae, unde, explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente iusto, ducimus ullam eaque dolore architecto ad consequatur quia enim, quaerat, assumenda, perspiciatis illo modi autem amet ut! Quae, unde, explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente iusto, ducimus ullam eaque dolore architecto ad consequatur quia enim, quaerat, assumenda, perspiciatis illo modi autem amet ut! Quae, unde, explicabo.

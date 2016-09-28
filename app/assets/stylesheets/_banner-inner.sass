@@ -1,10 +1,12 @@
 .banner-inner
   position: relative
   z-index: 1
-  top: 50%
-  +translate(0,-56%)
+  top: 5%
   @media #{$small-only}
+    top: 50%
     +translate(0,-50%)
+  @media #{$medium-only}
+    top: 15%
   .banner-inner-header
     position: relative
     width: 600px

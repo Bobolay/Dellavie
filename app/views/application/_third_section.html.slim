@@ -1,0 +1,58 @@
+.banner-outer
+  .logo = inline_svg "svg/Dellavie-logo-symbol.svg"
+  .social-links-container
+    a = inline_svg "svg/Dellavie-social-facebook.svg"
+    a = inline_svg "svg/Dellavie-social-g+.svg"
+    a = inline_svg "svg/Dellavie-social-twitter.svg"
+  .choose-language
+    p uk
+    .line
+  .slide-navigation
+    .square
+    .square
+    .square.active
+    .square-black
+  a.go-down
+    p about
+    = inline_svg "svg/Dellavie-arrow.svg"
+  .pager
+    .current-number 3
+    .slash &#47;
+    .total-number 3
+.bg-img style="background-image: url(#{asset_path('banners/dellavie-banner-bg-3.jpg')})"
+.row.banner-inner
+  .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
+    .banner-inner-header
+      p exclusif
+      span.top-title Coffe
+      = inline_svg "svg/Dellavie-Logo-text.svg"
+    .row.more-info
+      .large-6.medium-6.small-12.columns.coffee-img-container
+        img.coffee-img src=asset_path('photo/Dellavie-package-original.png')
+      .large-6.medium-6.small-12.columns.countries-container
+        p.title Is a blend of
+        .row
+          .large-4.medium-4.small-4.columns.country
+            .country-map = inline_svg "svg/Dellavie-countries-Brasil.svg"
+            p.coffee-sort
+              | Arabica
+              br
+              | Brazil
+            .plus
+              = inline_svg "svg/Dellavie-plus.svg"
+          .large-4.medium-4.small-4.columns.country
+            .country-map = inline_svg "svg/Dellavie-countries-Colombia.svg"
+            p.coffee-sort
+              | Arabica
+              br
+              | Colombia Excelso
+            .plus
+              = inline_svg "svg/Dellavie-plus.svg"
+          .large-4.medium-4.small-4.columns.country
+            .country-map = inline_svg "svg/Dellavie-countries-Ephiopia.svg"
+            p.coffee-sort
+              | Arabica
+              br
+              | Ethiopia
+            .plus
+              = inline_svg "svg/Dellavie-plus.svg"

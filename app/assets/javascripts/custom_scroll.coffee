@@ -3,28 +3,30 @@ $(document).on "ready", ->
   $(".full-page-container .page-section").first().addClass("active")
   $active_section_index = $(".page-section.active").index()
 
-window.custom_scroll = (direction = "down")->
+  $('.go-down').on 'click', ->
 
-  $active_section_index = $(".page-section.active").index()
-  $active_section = $(".full-page-container .page-section.active")
+  window.custom_scroll = (direction = "down")->
 
-  if direction == "up" && $active_section_index = 0
-    return
+    $active_section_index = $(".page-section.active").index()
+    $active_section = $(".full-page-container .page-section.active")
 
-  if direction == "down"
-    $next_section = $active_section.first().next()
-  else
-    $next_section = $active_section.first().prev()
-
-  if direction == "up" && $active_section_index = 3
-    # how deep we scrolled in div
-    $scrollTop = $(window).scrollTop()
-    # div top
-    # $elementOffset = $active_section.offset().top
-    if $scrollTop > 0
+    if direction == "up" && $active_section_index = 0
       return
-    else
 
-  if $next_section.length > 0
-    $active_section.removeClass('active')
-    $next_section.addClass('active')
+    if direction == "down"
+      $next_section = $active_section.first().next()
+    else
+      $next_section = $active_section.first().prev()
+
+    if direction == "up" && $active_section_index = 3
+      # how deep we scrolled in div
+      $scrollTop = $(window).scrollTop()
+      # div top
+      # $elementOffset = $active_section.offset().top
+      if $scrollTop > 0
+        return
+      else
+
+    if $next_section.length > 0
+      $active_section.removeClass('active')
+      $next_section.addClass('active')

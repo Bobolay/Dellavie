@@ -20,7 +20,7 @@ $popup-img-height: 300px
   position: absolute
   opacity: 0
   display: none
-  width: 600px
+  width: 700px
   height: 80vh
   top: calc((100vh - 80vh)/2)
   left: 50%
@@ -35,6 +35,9 @@ $popup-img-height: 300px
 
   @media #{$small-only}
     width: calc(100vw - 2rem)
+  @media #{$medium-only}
+    width: calc(100vw - 2rem)
+    max-width: 700px
 
   .popup-img
     height: $popup-img-height
@@ -93,7 +96,6 @@ $popup-img-height: 300px
     position: absolute
     right: -12px
     top: -12px
-    +rotate(45deg)
     z-index: 1
     width: 24px
     cursor: pointer

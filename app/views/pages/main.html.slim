@@ -1,30 +1,10 @@
 .full-page-container
-  .page-section.first.active
-    = render 'banner_outer'
-    .bg-img style="background-image: url(#{asset_path('banners/dellavie-banner-bg-1.jpg')})"
-    = render 'banner_inner'
-    
-    .popup-background
-    .coffee-sort-popup
-      .close-popup = inline_svg "svg/Dellavie-plus.svg"
-      .popup-img
-        .bg-img style="background-image: url(#{asset_path('photo/slider-photo-1.jpg')})"
-        .left-arrow-container.slider-prev
-          = inline_svg "svg/left-arrow.svg"
-        .right-arrow-container.slider-next
-          = inline_svg "svg/right-arrow.svg"
-      .text
-        p.header arabica brazil santos
-        p.regular Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente iusto, ducimus ullam eaque dolore architecto ad consequatur quia enim, quaerat, assumenda, perspiciatis illo modi autem amet ut! Quae, unde, explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente iusto, ducimus ullam eaque dolore architecto ad consequatur quia enim, quaerat, assumenda, perspiciatis illo modi autem amet ut! Quae, unde, explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente iusto, ducimus ullam eaque dolore architecto ad consequatur quia enim, quaerat, assumenda, perspiciatis illo modi autem amet ut! Quae, unde, explicabo.
-
-  .page-section.second
-    = render 'banner_outer'
-    .bg-img style="background-image: url(#{asset_path('banners/dellavie-banner-bg-2.jpg')})"
-    = render 'banner_inner'
-  .page-section.third
-    = render 'banner_outer'
-    .bg-img style="background-image: url(#{asset_path('banners/dellavie-banner-bg-3.jpg')})"
-    = render 'banner_inner'
+  .page-section.active
+    = render 'first_section'
+  .page-section
+    = render 'second_section'
+  .page-section
+    = render 'third_section'
 
   .page-section.auto-height
 

@@ -7,16 +7,23 @@
     overflow: hidden
     +transition(1s)
     +transition-property(max-height)
+    .banner-inner
+      opacity: 0
+      +transition(0.5s)
+    .banner-outer
+      opacity: 0
+      +transition(0.25s)
     &.auto-height
       height: auto
     &.active
       max-height: 100vh
+      .banner-inner
+        opacity: 1
+      .banner-outer
+        opacity: 1
     &:last-child.active
       max-height: 20000px
 
-  .first
-  .second
-  .third
 
 .about-us
   padding: 200px 0 100px

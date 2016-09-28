@@ -14,11 +14,9 @@ if(typeof InstallTrigger !== 'undefined' || iev == 11) {
     $(window).on('scroll', function() {
         st = $(this).scrollTop();
         if(st < lastScrollTop) {
-            // console.log('Up');
             delay('custom_scroll', function(){custom_scroll("up");}, 1000, true, false)
         }
         else if(st > lastScrollTop) {
-            // console.log('Down');
             delay('custom_scroll', function(){custom_scroll("down");}, 1000, true, false)
         }
         lastScrollTop = st;
@@ -28,12 +26,12 @@ if(typeof InstallTrigger !== 'undefined' || iev == 11) {
 else {
     $('body').on('mousewheel', function(e){
         if(e.originalEvent.wheelDelta > 0) {
-            // console.log('Up');
             delay('custom_scroll', function(){custom_scroll("up");}, 1000, true, false)
         }
         else if(e.originalEvent.wheelDelta < 0) {
-            // console.log('Down');
             delay('custom_scroll', function(){custom_scroll("down");}, 1000, true, false)
         }
     });
 }
+
+// window.addEventListener('scroll', function() { alert("Scrolled"); });
