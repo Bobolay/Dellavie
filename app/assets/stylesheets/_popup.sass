@@ -30,7 +30,8 @@ $popup-img-height: 300px
     display: block
     z-index: 2
   &.visible
-    +transition(0.5s)
+    +transition(2s)
+    +transition-property(opacity)
     opacity: 1
 
   @media #{$small-only}
@@ -43,9 +44,8 @@ $popup-img-height: 300px
     height: $popup-img-height
     width: 100%
     position: relative
-    img
-      height: 100%
-      width: 100%
+    .bg-img
+      background-position: center
 
     .left-arrow-container, .right-arrow-container
       width: 26px
