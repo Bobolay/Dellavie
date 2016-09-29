@@ -76,6 +76,7 @@
     top: 50%
     +translate(0,-50%)
     .square, .square-black
+      cursor: pointer
       width: 8px
       height: 8px
       border: 1px solid white
@@ -94,7 +95,7 @@
     position: absolute
     width: 40px
     height: 40px
-    bottom: 0
+    bottom: -6px
     left: 50%
     text-align: center
     +translate(-50%,0)
@@ -141,3 +142,22 @@
       font-size: 60px
     @media #{$small-only}
       display: none
+
+.first-banner
+  .social-links-container
+    a
+      &:hover
+        .logo
+          fill: $orange
+.second-banner
+  .social-links-container
+    a
+      &:hover
+        .logo
+          fill: $aqua
+.third-banner
+  .social-links-container
+    a
+      &:hover
+        .logo
+          fill: $violet

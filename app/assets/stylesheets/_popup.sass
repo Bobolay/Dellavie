@@ -1,4 +1,4 @@
-.popup-background
+.popup-dark-background
   position: absolute
   width: 100%
   height: 100%
@@ -6,33 +6,49 @@
   opacity: 0
   top: 0
   left: 0
-  display: none
-  &.display-block
-    display: block
-    z-index: 2
   &.visible
-    +transition(0.3s)
+    +transition(0.25s)
     opacity: 0.75
-   
+    z-index: 2
+
+.popup-white-background
+  position: absolute
+  opacity: 0
+  width: 700px
+  height: 80vh
+  top: calc((100vh - 80vh)/2)
+  left: 50%
+  background-color: white
+  +translate(-50%,0)
+  +animation-timing-function(cubic-bezier(0.215, 0.61, 0.355, 1))
+  &.visible
+    +transition(1s)
+    +transition-property(opacity)
+    opacity: 1
+    z-index: 2
+  @media #{$small-only}
+    width: calc(100vw - 2rem)
+  @media #{$medium-only}
+    width: calc(100vw - 2rem)
+    max-width: 700px
+
 $popup-img-height: 300px
 
 .coffee-sort-popup
   position: absolute
   opacity: 0
-  display: none
   width: 700px
   height: 80vh
   top: calc((100vh - 80vh)/2)
   left: 50%
   +translate(-50%,0)
-
-  &.display-block
-    display: block
-    z-index: 2
+  // +transition(1s)
+  +animation-timing-function(cubic-bezier(0.215, 0.61, 0.355, 1))
   &.visible
-    +transition(2s)
+    +transition(1s)
     +transition-property(opacity)
     opacity: 1
+    z-index: 2
 
   @media #{$small-only}
     width: calc(100vw - 2rem)
@@ -44,6 +60,8 @@ $popup-img-height: 300px
     height: $popup-img-height
     width: 100%
     position: relative
+    @media #{$small-only}
+      height: 200px
     .bg-img
       background-position: center
 
@@ -80,6 +98,9 @@ $popup-img-height: 300px
     background-color: white
     padding: 50px
     height: calc(80vh - #{$popup-img-height})
+    @media #{$small-only}
+      height: calc(80vh - 200px)
+      padding: 20px
     .header
       color: $orange
       text-transform: uppercase
@@ -87,6 +108,8 @@ $popup-img-height: 300px
       font-size: 36px
       font-weight: bold
       letter-spacing: 1px
+      @media #{$small-only}
+        font-size: 28px
     .regular
       color: $grey
       font-size: 14px
@@ -99,3 +122,6 @@ $popup-img-height: 300px
     z-index: 1
     width: 24px
     cursor: pointer
+    +transition(0.25s)
+    &:hover
+      +scale(1.1)

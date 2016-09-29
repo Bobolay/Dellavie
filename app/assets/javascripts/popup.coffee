@@ -1,8 +1,7 @@
-# $border = $frame.find('.top-border')
-
 $(document).ready ->
   
-  $popup_bg = $('.popup-background')
+  $popup_dark_bg = $('.popup-dark-background')
+  $popup_white_bg = $('.popup-white-background')
   
   $popup = $('.coffee-sort-popup')
   $close = $('.close-popup')
@@ -12,20 +11,19 @@ $(document).ready ->
     $container = $(this).closest('.page-section')
 
     $popup = $container.find(".coffee-sort-popup")
-    $popup_bg = $container.find(".popup-background")
+    $popup_dark_bg = $container.find(".popup-dark-background")
+    $popup_white_bg = $container.find(".popup-white-background")
 
-    # popup background
-    $popup_bg.addClass('display-block')
+
     setTimeout (->
-      $popup_bg.addClass('visible')
+      $popup_dark_bg.addClass('visible')
     ), 0
     setTimeout (->
-      $popup.eq($index).addClass('display-block')
+      $popup_white_bg.addClass('visible')
     ), 250
     setTimeout (->
       $popup.eq($index).addClass('visible')
     ), 255
-    
 
   $arrow_left = $('.coffee-sort-popup .left-arrow-container')
   $arrow_right = $('.coffee-sort-popup .right-arrow-container')
@@ -36,12 +34,14 @@ $(document).ready ->
       $next_popup = $('.coffee-sort-popup').eq(2)
     else
       $next_popup = $('.coffee-sort-popup.visible').first().prev()
-    $('.coffee-sort-popup.display-block').removeClass('display-block')
-    $('.coffee-sort-popup.visible').removeClass('visible')
-    $next_popup.addClass('display-block')
+    setTimeout (->
+      $('.coffee-sort-popup.visible').removeClass('visible')
+    ), 1
     setTimeout (->
       $next_popup.addClass('visible')
-    ), 1
+    ), 102
+
+
 
   $arrow_right.on 'click', ->
     $popup_index = $('.coffee-sort-popup.visible').index()
@@ -49,21 +49,16 @@ $(document).ready ->
       $next_popup = $('.coffee-sort-popup').eq(0)
     else
       $next_popup = $('.coffee-sort-popup.visible').first().next()
-    $('.coffee-sort-popup.display-block').removeClass('display-block')
-    $('.coffee-sort-popup.visible').removeClass('visible')
-    $next_popup.addClass('display-block')
+    setTimeout (->
+      $('.coffee-sort-popup.visible').removeClass('visible')
+    ), 1
     setTimeout (->
       $next_popup.addClass('visible')
-    ), 1
-
-
-
+    ), 102
 
 
 
   $close.on 'click', ()->
-    $popup_bg.removeClass('display-block')
-    $popup_bg.removeClass('visible')
-    $popup.removeClass('display-block')
+    $popup_dark_bg.removeClass('visible')
+    $popup_white_bg.removeClass('visible')
     $popup.removeClass('visible')
-    $popup.removeClass('current-popup')

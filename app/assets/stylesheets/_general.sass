@@ -59,12 +59,16 @@ ul
     margin: 4px
     width: 30px
     height: 30px
-    // +transition(0.25s)
-  svg
-    fill: white
-    // +transition(0.25s)
-    width: 30px
-    height: 30px
+    svg
+      width: 30px
+      height: 30px
+      *
+        +transition(0.5s)
+    &:hover
+      svg
+        .background
+          fill: white
+
 
 .dark-bg
   background-color: $brown

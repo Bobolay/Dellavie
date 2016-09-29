@@ -4,6 +4,16 @@ $(document).on "ready", ->
   $active_section_index = $(".page-section.active").index()
 
   $('.go-down').on 'click', ->
+    $next_section = $(".page-section").eq(3)
+    $(".page-section.active").removeClass("active")
+    $next_section.addClass("active")
+
+  $('.square').on 'click', ->
+    $index = $(this).index()
+    $container = $(this).closest('.page-section')
+    $next_section = $(".page-section").eq($index)
+    $(".page-section.active").removeClass("active")
+    $next_section.addClass("active")
 
   window.custom_scroll = (direction = "down")->
 

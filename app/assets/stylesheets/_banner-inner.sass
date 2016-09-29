@@ -1,7 +1,7 @@
 .banner-inner
   position: relative
   z-index: 1
-  top: 5%
+  top: 7%
   @media #{$small-only}
     top: 50%
     +translate(0,-50%)
@@ -55,9 +55,26 @@
       @media #{$medium-only}
         padding-top: 100px
       .coffee-img
-        +scale(1.75)
+        max-width: none
         @media #{$small-only}
-          +scale(1)
+          max-width: 100%
+        @media #{$medium-only}
+          width: 600px
+          height: 600px
+          +translate(-30%,-30%)
+        @media #{$landscape}
+          width: 700px
+          height: 700px
+          +translate(-35%,-20%)
+        @media #{$xlarge-only}
+          width: 900px
+          height: 900px
+          +translate(-30%,-20%)
+        @media #{$xxlarge-up}
+          width: 1000px
+          height: 1000px
+          +translate(-26%,-21%)
+
     .countries-container
       position: relative
       padding-top: 200px
@@ -91,16 +108,40 @@
             font-size: 0.875em
             height: 50px    
         .plus
-          width: 30px
-          height: 30px
           margin: 20px auto 0
-          +transition(0.25s)
+          svg
+            width: 29px
+            height: 29px
+            *
+              +transition(0.5s)
           @media #{$small-only}
             margin: 10px auto 0
         &:hover
-          .country-map
-            *
-              opacity: 0.75
           .plus
-            +scale(1.2)
+            svg
+              .background
+                fill: white
+              .circle
+                fill: white
+.first-banner
+  .country
+    &:hover
+      .plus
+        svg
+          .plus
+            fill: $orange
+.second-banner
+  .country
+    &:hover
+      .plus
+        svg
+          .plus
+            fill: $aqua
+.third-banner
+  .country
+    &:hover
+      .plus
+        svg
+          .plus
+            fill: $violet
 
