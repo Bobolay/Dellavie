@@ -33,3 +33,20 @@ else {
         }
     });
 }
+
+
+
+$(document).swipe( {
+    //Generic swipe handler for all directions
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+        // $(this).text("You swiped " + direction );   
+        if (direction == 'down') {
+            delay('custom_scroll', function(){custom_scroll("up");}, 1000, true, false)
+        }
+        else {
+            delay('custom_scroll', function(){custom_scroll("down");}, 1000, true, false)
+        }
+    },
+    //Default is 75px, set to 0 for demo so any distance triggers swipe
+   threshold:75
+});

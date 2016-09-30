@@ -4,6 +4,7 @@
     "foundation-sites": "latest",
     "sass-css3-mixins": "latest",
     "jquery-ui": "latest",
-    "sass-burger": "latest"
+    "sass-burger": "latest",
+    "jquery-touchswipe": "latest"
   }
 }

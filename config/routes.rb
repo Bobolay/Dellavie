@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   root to: "pages#main"
 
   controller :pages do
-    get "about-us", action: "about_us"
-    # get "contact-us", action: "contact_us"
   end
 
   # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

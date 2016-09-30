@@ -15,12 +15,12 @@ $(document).on "ready", ->
     $(".page-section.active").removeClass("active")
     $next_section.addClass("active")
 
-  window.custom_scroll = (direction = "down")->
+  window.custom_scroll = (direction = "down") ->
 
     $active_section_index = $(".page-section.active").index()
     $active_section = $(".full-page-container .page-section.active")
 
-    if direction == "up" && $active_section_index = 0
+    if (direction == "up") && ($active_section_index == 0)
       return
 
     if direction == "down"
@@ -28,7 +28,7 @@ $(document).on "ready", ->
     else
       $next_section = $active_section.first().prev()
 
-    if direction == "up" && $active_section_index = 3
+    if (direction == "up") && ($active_section_index == 3)
       # how deep we scrolled in div
       $scrollTop = $(window).scrollTop()
       # div top
@@ -41,7 +41,8 @@ $(document).on "ready", ->
       $active_section.removeClass('active')
       $next_section.addClass('active')
 
-  $(".page-section").on "swipeup", ->
-    alert("up")
-  $(".page-section").on "swipedown", ->
-    alert("down")
+  # $(".page-section").swipe
+  #   swipe:(event, direction, distance, duration, fingerCount, fingerData)->
+  #     # $(this).text("You swiped " + direction )
+  #     console.log('swipe', arguments)
+  #   threshold:0
