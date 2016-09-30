@@ -25,6 +25,10 @@ if(typeof InstallTrigger !== 'undefined' || iev == 11) {
 // Other browsers
 else {
     $('body').on('mousewheel', function(e){
+        if ($('.coffee-sort-popup.visible').length) {
+            //e.preventDefault()
+            return
+        }
         if(e.originalEvent.wheelDelta > 0) {
             delay('custom_scroll', function(){custom_scroll("up");}, 1000, true, false)
         }
@@ -39,9 +43,15 @@ $('.page-section').swipe( {
     //Generic swipe handler for all directions
 
     swipeStatus:function(event, phase, direction, distance, duration, fingerCount, fingerData) {
-
+        //console.log('who is this: ', this)
+        if ($('.coffee-sort-popup.visible').length) {
+           // event.preventDefault()
+            return
+        }
         if (direction == 'down') {
-            if(!$(this).is(":first-child")){
+            var active_section_index = $(this).index()
+            if(active_section_index > 0){
+                console.log('>0')
                 event.preventDefault()
             }
             delay('custom_scroll', function(){custom_scroll("up");}, 1000, true, false)
