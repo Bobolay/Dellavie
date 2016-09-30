@@ -50,9 +50,14 @@ $('.page-section').swipe( {
         }
         if (direction == 'down') {
             var active_section_index = $(this).index()
-            if(active_section_index > 0 && !$(this).is(':last-child')){
-                console.log('>0')
-                event.preventDefault()
+            var scroll_top = $("body").scrollTop()
+            var is_last_section = $(this).is(':last-child')
+            var is_medium_section = active_section_index > 0 && !is_last_section
+            if(active_section_index > 0  ){
+                if ((is_last_section && scroll_top == 0) || is_medium_section ){
+                    console.log('>0')
+                    event.preventDefault()
+                }
             }
             delay('custom_scroll', function(){custom_scroll("up");}, 1000, true, false)
         }
