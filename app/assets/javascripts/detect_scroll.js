@@ -50,7 +50,7 @@ $('.page-section').swipe( {
         }
         if (direction == 'down') {
             var active_section_index = $(this).index()
-            if(active_section_index > 0){
+            if(active_section_index > 0 && !$(this).is(':last-child')){
                 console.log('>0')
                 event.preventDefault()
             }
