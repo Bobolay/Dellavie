@@ -41,5 +41,7 @@ $(document).on "ready", ->
       $active_section.removeClass('active')
       $next_section.addClass('active')
 
-  $(".page-section").on "swipe", ->
-    alert("Ads")
+  $(".page-section").on "swipeup", ->
+    alert("up")
+  $(".page-section").on "swipedown", ->
+    alert("down")
