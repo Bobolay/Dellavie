@@ -33,5 +33,3 @@ else {
         }
     });
 }
-
-// window.addEventListener('scroll', function() { alert("Scrolled"); });
