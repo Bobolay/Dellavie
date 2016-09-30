@@ -40,9 +40,3 @@ $(document).on "ready", ->
     if $next_section.length > 0
       $active_section.removeClass('active')
       $next_section.addClass('active')
-
-  # $(".page-section").swipe
-  #   swipe:(event, direction, distance, duration, fingerCount, fingerData)->
-  #     # $(this).text("You swiped " + direction )
-  #     console.log('swipe', arguments)
-  #   threshold:0

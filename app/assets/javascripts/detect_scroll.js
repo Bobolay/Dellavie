@@ -37,30 +37,49 @@ else {
 
 $('.page-section').swipe( {
     //Generic swipe handler for all directions
-    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-        
 
-        if ($(this).is(":last-child")) {
+    swipeStatus:function(event, phase, direction, distance, duration, fingerCount, fingerData) {
+        //console.log("action: ", action, "direction: ", direction)
+        distance_ratio = 3 * duration / 0.2 / 1000
+        console.log("phase: ", phase, "; direction: ", direction, "; distance: ", distance, ";duration: ", duration, "; distance_ratio: ", distance_ratio)
+        /*if ($(this).is(":last-child")) {
             scroll_top = $("body").scrollTop()
             new_scroll_top = false
             if(direction == 'down' && scroll_top > 0)
-                new_scroll_top = scroll_top - distance*3
+                new_scroll_top = scroll_top - distance * distance_ratio
             else if(direction == 'up')
-                new_scroll_top = scroll_top + distance*3
+                new_scroll_top = scroll_top + distance * distance_ratio
             if (new_scroll_top < 0)
                 new_scroll_top = 0
             if (new_scroll_top !== false)
-                $("body").animate({scrollTop: new_scroll_top}, 1000, 'easeOutQuart')
+                $("body").animate({scrollTop: new_scroll_top}, 30, 'easeOutQuart')
         }
 
-        // $(this).text("You swiped " + direction );   
-        if (direction == 'down') {
+        else*/ if (direction == 'down') {
             delay('custom_scroll', function(){custom_scroll("up");}, 1000, true, false)
         }
         else if (direction == "up") {
+            if($(this).next().is(":last-child")){
+                event.preventDefault()
+            }
             delay('custom_scroll', function(){custom_scroll("down");}, 1000, true, false)
         }
     },
+    // swipeStatus: function(){
+    //     console.log("swipeStatus: this:", this, "; args:", arguments)
+    // },
+
+    //     // $(this).text("You swiped " + direction );   
+    //     if (direction == 'down') {
+    //         delay('custom_scroll', function(){custom_scroll("up");}, 1000, true, false)
+    //     }
+    //     else if (direction == "up") {
+    //         delay('custom_scroll', function(){custom_scroll("down");}, 1000, true, false)
+    //     }
+    // },
+
     //Default is 75px, set to 0 for demo so any distance triggers swipe
-   threshold:0
+   threshold:0,
+   allowPageScroll: true,
+   preventDefaultEvents: false
 });
