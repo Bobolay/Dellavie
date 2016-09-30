@@ -40,3 +40,6 @@ $(document).on "ready", ->
     if $next_section.length > 0
       $active_section.removeClass('active')
       $next_section.addClass('active')
+
+  $(".page-section").on "swipe", ->
+    alert("Ads")
