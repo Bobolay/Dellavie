@@ -8,34 +8,18 @@ if (ieold) iev=new Number(RegExp.$1);
 if (navigator.appVersion.indexOf("MSIE 10") != -1) iev=10;
 if (trident&&rv!=-1) iev=11;
 
-// Firefox or IE 11 (not really working well)
-if(typeof InstallTrigger !== 'undefined' || iev == 11) {
-    var lastScrollTop = 0;
-    $(window).on('scroll', function() {
-        st = $(this).scrollTop();
-        if(st < lastScrollTop) {
-            delay('custom_scroll', function(){custom_scroll("up");}, 1000, true, false)
-        }
-        else if(st > lastScrollTop) {
-            delay('custom_scroll', function(){custom_scroll("down");}, 1000, true, false)
-        }
-        lastScrollTop = st;
-    });
-}
-// CHROME, OPERA DETECT
-else {
-    $('body').on('mousewheel', function(e){
-        if ($('.coffee-sort-popup.visible').length) {
-            return
-        }
-        if(e.originalEvent.wheelDelta > 0) {
-            delay('custom_scroll', function(){custom_scroll("up");}, 1000, true, false)
-        }
-        else if(e.originalEvent.wheelDelta < 0) {
-            delay('custom_scroll', function(){custom_scroll("down");}, 1000, true, false)
-        }
-    });
-}
+
+$('body').bind('mousewheel', function(e){
+    if ($('.coffee-sort-popup.visible').length) {
+        return
+    }
+    if(e.originalEvent.wheelDelta > 0) {
+        delay('custom_scroll', function(){custom_scroll("up");}, 1000, true, false)
+    }
+    else if(e.originalEvent.wheelDelta < 0) {
+        delay('custom_scroll', function(){custom_scroll("down");}, 1000, true, false)
+    }
+});
 
 // FIREFOX DETECT
 $(window).bind('DOMMouseScroll', function(e){
