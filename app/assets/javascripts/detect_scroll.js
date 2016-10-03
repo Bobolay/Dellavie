@@ -8,7 +8,7 @@ if (ieold) iev=new Number(RegExp.$1);
 if (navigator.appVersion.indexOf("MSIE 10") != -1) iev=10;
 if (trident&&rv!=-1) iev=11;
 
-// Firefox or IE 11
+// Firefox or IE 11 (not really working well)
 if(typeof InstallTrigger !== 'undefined' || iev == 11) {
     var lastScrollTop = 0;
     $(window).on('scroll', function() {
@@ -22,11 +22,10 @@ if(typeof InstallTrigger !== 'undefined' || iev == 11) {
         lastScrollTop = st;
     });
 }
-// Other browsers
+// CHROME, OPERA DETECT
 else {
     $('body').on('mousewheel', function(e){
         if ($('.coffee-sort-popup.visible').length) {
-            //e.preventDefault()
             return
         }
         if(e.originalEvent.wheelDelta > 0) {
@@ -37,6 +36,19 @@ else {
         }
     });
 }
+
+// FIREFOX DETECT
+$(window).bind('DOMMouseScroll', function(e){
+    if(e.originalEvent.detail > 0) {
+     //scroll down
+        delay('custom_scroll', function(){custom_scroll("down");}, 1000, true, false)
+    } else {
+     //scroll up
+        delay('custom_scroll', function(){custom_scroll("up");}, 1000, true, false)
+    }
+    //prevent page fom scrolling
+    // return false;
+});
 
 
 $('.page-section').swipe( {

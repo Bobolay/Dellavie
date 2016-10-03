@@ -10,6 +10,8 @@
 #= require plugins/global
 #= require plugins/clickout
 
+#= require main
+
 #= require form
 
 #= require plugins/jquery.bxslider
