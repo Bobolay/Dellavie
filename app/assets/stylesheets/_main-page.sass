@@ -7,21 +7,16 @@
     overflow: hidden
     +transition(1s)
     +transition-property(max-height)
-    .banner-inner
+    .coffee-img-container, .coffee-header, .more-info
       opacity: 1
       +transition(0.5s)
       @media #{$medium-up}
         opacity: 0
-    .banner-outer
-      opacity: 0
-      +transition(0.25s)
     &.auto-height
       height: auto
     &.active
       max-height: 100vh
-      .banner-inner
-        opacity: 1
-      .banner-outer
+      .coffee-img-container, .coffee-header, .more-info
         opacity: 1
     &:last-child.active
       max-height: 20000px
