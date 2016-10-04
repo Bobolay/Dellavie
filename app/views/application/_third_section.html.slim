@@ -19,16 +19,18 @@ a.go-down
   .slash &#47;
   .total-number 3
 .bg-img style="background-image: url(#{asset_path('banners/dellavie-banner-bg-3.jpg')})"
-.row.banner-inner
+.coffee-img-container
+  .coffee-img style="background-image: url(#{asset_path('photo/Dellavie-package-original.png')})"
+.row.coffee-header
   .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
     .banner-inner-header
       p exclusif
       span.top-title Coffe
       = inline_svg "svg/Dellavie-Logo-text.svg"
+.row.more-info
+  .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
     .row.more-info
-      .large-6.medium-6.small-12.columns.coffee-img-container
-        img.coffee-img src=asset_path('photo/Dellavie-package-original.png')
-      .large-6.medium-6.small-12.columns.countries-container
+      .large-6.medium-6.small-12.columns.countries-container.medium-push-6
         p.title Is a blend of
         .row
           .large-4.medium-4.small-4.columns.country
