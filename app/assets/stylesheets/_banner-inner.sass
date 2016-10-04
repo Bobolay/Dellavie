@@ -1,128 +1,116 @@
-.banner-inner
+.coffee-img-container
+  position: absolute
+  width: 60vw
+  height: 100vh
+  z-index: 2
+  @media #{$small-only}
+    width: 100vw
+  @media #{$xxlarge-up}
+    width: 70vw
+  .coffee-img
+    position: absolute
+    background-size: contain
+    background-repeat: no-repeat
+    width: 100%
+    height: 100%
+    background-position: center
+.coffee-header
   position: relative
-  top: 7%
+  @media #{$small-only}
+    z-index: 2
+.banner-inner-header
+  position: relative
+  width: 600px
+  margin: 0 auto
+  margin-top: 10vh
   z-index: 1
   @media #{$small-only}
-    top: 50%
-    +translate(0,-50%)
-  @media #{$medium-only}
-    top: 15%
-  .banner-inner-header
-    position: relative
-    width: 600px
-    margin: 0 auto
+    margin-top: 20vh
+  p
+    font-size: 8.125rem
+    text-transform: uppercase
+    line-height: 1
+    letter-spacing: 5px
+    +bold
+  .top-title
+    position: absolute
+    +marck
+    font-size: 1.75rem
+    left: 3rem
+    top: -1rem
+  svg
+    position: absolute
+    height: 2.75rem
+    left: 5rem
+    bottom: -2.5rem
+  @media #{$small-only}
+    width: 260px
+    z-index: 1
     p
-      font-size: 8.125rem
-      text-transform: uppercase
-      line-height: 1
-      letter-spacing: 5px
-      +bold
+      font-size: 2.5rem
     .top-title
-      position: absolute
-      +marck
-      font-size: 1.75rem
-      left: 3rem
-      top: -1rem
+      left: 50%
+      +translate(-50%,0)
+      top: -1.25rem
+      font-size: 1.25rem
     svg
-      position: absolute
-      height: 2.75rem
-      left: 5rem
-      bottom: -2.5rem
-    @media #{$small-only}
-      width: 260px
-      z-index: 1
-      p
-        font-size: 2.5rem
-      .top-title
-        left: 50%
-        +translate(-50%,0)
-        top: -1.25rem
-        font-size: 1.25rem
-      svg
-        left: 50%
-        +translate(-50%,0)
-        height: 1.5rem
-        bottom: -1.5rem
-    @media #{$large-up}
-      top: 70px
-      left: 10px
+      left: 50%
+      +translate(-50%,0)
+      height: 1.5rem
+      bottom: -1.5rem
 
-  .more-info
-    margin-top: 50px
+.more-info
+  position: relative
+  @media #{$small-only}
+    margin-top: 25vh
+  .countries-container
+    position: relative
+    padding-top: 15vh
+    text-align: center
+    z-index: 2
     @media #{$small-only}
+      padding-top: 0
       margin-top: -50px
-    .coffee-img-container
-      @media #{$medium-only}
-        padding-top: 100px
-      .coffee-img
-        max-width: none
-        @media #{$small-only}
-          max-width: 100%
-        @media #{$medium-only}
-          width: 600px
-          height: 600px
-          +translate(-30%,-30%)
-        @media #{$landscape}
-          width: 700px
-          height: 700px
-          +translate(-35%,-20%)
-        @media #{$xlarge-only}
-          width: 900px
-          height: 900px
-          +translate(-30%,-20%)
-        @media #{$xxlarge-up}
-          width: 1000px
-          height: 1000px
-          +translate(-26%,-21%)
-
-    .countries-container
-      position: relative
-      padding-top: 200px
-      text-align: center
-      z-index: 2
+    @media #{$medium-only}
+      padding-top: 100px
+    @media #{$landscape}
+      padding-top: 100px
+    .title
+      +marck
+      font-size: 2.25rem
+      margin-bottom: 20px
       @media #{$small-only}
-        padding-top: 0
-        margin-top: -50px
-      @media #{$medium-only}
-        padding-top: 100px
-      @media #{$landscape}
-        padding-top: 100px
-      .title
-        +marck
-        font-size: 2.25rem
-        margin-bottom: 20px
+        font-size: 1rem
+        margin-bottom: 0
+    .country
+      cursor: pointer
+      .country-map
+        *
+          +transition(0.25s)
         @media #{$small-only}
-          font-size: 1rem
-          margin-bottom: 0
-      .country
-        cursor: pointer
-        .country-map
+          display: none
+      .coffee-sort
+        line-height: 1.25em
+        height: 60px
+        @media #{$small-only}
+          font-size: 0.875em
+          height: 50px    
+      .plus
+        margin: 20px auto 0
+        svg
+          width: 29px
+          height: 29px
           *
-            +transition(0.25s)
-          @media #{$small-only}
-            display: none
-        .coffee-sort
-          line-height: 1.25em
-          height: 60px
-          @media #{$small-only}
-            font-size: 0.875em
-            height: 50px    
+            +transition(0.5s)
+        @media #{$small-only}
+          margin: 10px auto 0
+      &:hover
         .plus
-          margin: 20px auto 0
           svg
-            width: 29px
-            height: 29px
-            *
-              +transition(0.5s)
-          @media #{$small-only}
-            margin: 10px auto 0
-        &:hover
-          .plus
-            svg
-              .background
-                fill: white
-              .circle
-                fill: white
+            .background
+              fill: white
+            .circle
+              fill: white
 .first-banner
   .country
     &:hover

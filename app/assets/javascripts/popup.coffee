@@ -62,3 +62,11 @@ $(document).ready ->
     $popup_dark_bg.removeClass('visible')
     $popup_white_bg.removeClass('visible')
     $popup.removeClass('visible')
+
+  $.clickOut(".coffee-sort-popup",
+    ()->
+      $popup_dark_bg.removeClass('visible')
+      $popup_white_bg.removeClass('visible')
+      $popup.removeClass('visible')
+    {except: ".coffee-sort-popup"}
+  )

@@ -1,5 +1,6 @@
-// Detect IE version
 $(document).on("ready", function(){
+
+    //     A L L     B R O W S E R S     D E T E C T
 
     $('body').bind('mousewheel', function(e){
         if ($('.coffee-sort-popup.visible').length) {
@@ -13,7 +14,8 @@ $(document).on("ready", function(){
         }
     });
 
-    // FIREFOX DETECT
+    //     F I R E F O X     D E T E C T
+    
     $(window).bind('DOMMouseScroll', function(e){
         if(e.originalEvent.detail > 0) {
          //scroll down
