@@ -6,7 +6,7 @@
     width: 100vw
     height: 100vh
     max-height: 0
-    max-height: none !important
+    max-height: none
     overflow: hidden
     +transition(1s)
     +transition-property("max-height,top")
@@ -17,7 +17,7 @@
       @media #{$medium-up}
         opacity: 0
     &.auto-height
-    
+      max-height: 100vh
       height: auto
     &.active
       top: 0
