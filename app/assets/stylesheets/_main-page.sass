@@ -2,11 +2,11 @@
   color: white
   .page-section
     position: absolute
-    top: 100vh
+    top: 0
     width: 100vw
     height: 100vh
     max-height: 0
-    max-height: none
+    max-height: 100vh
     overflow: hidden
     +transition(1s)
     +transition-property("max-height,top")
@@ -24,6 +24,10 @@
       max-height: 100vh
       .coffee-img-container, .coffee-header, .more-info
         opacity: 1
+
+      & ~ .page-section
+        max-height: 0
+        top: 100vh
     &:last-child.active
       max-height: 20000px
 
