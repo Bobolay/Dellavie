@@ -1,12 +1,13 @@
 .full-page-container
   color: white
   .page-section
-    position: relative
+    position: absolute
+    top: 100vh
     height: 100vh
     max-height: 0
     overflow: hidden
     +transition(1s)
-    +transition-property(max-height)
+    +transition-property("max-height,top")
     +transform(translateZ(0))
     .coffee-img-container, .coffee-header, .more-info
       opacity: 1
@@ -14,8 +15,10 @@
       @media #{$medium-up}
         opacity: 0
     &.auto-height
+    
       height: auto
     &.active
+      top: 0
       max-height: 100vh
       .coffee-img-container, .coffee-header, .more-info
         opacity: 1
