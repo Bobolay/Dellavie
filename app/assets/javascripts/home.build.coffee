@@ -3,8 +3,8 @@
 #= require jquery-ui/jquery-ui.min
 #= require jquery-touchswipe/jquery.touchSwipe.min
 
-#= require plugins/jquery.appear
-#= require appear-initialize
+# require plugins/jquery.appear
+# require appear-initialize
 
 #= require plugins/delay
 #= require plugins/global
