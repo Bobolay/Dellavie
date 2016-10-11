@@ -28,27 +28,31 @@ $(document).ready ->
   $arrow_left = $('.coffee-sort-popup .left-arrow-container')
   $arrow_right = $('.coffee-sort-popup .right-arrow-container')
 
+
+
   $arrow_left.on 'click', ->
-    $popup_index = $('.coffee-sort-popup.visible').index()
+    $container = $(this).closest('.popup-container')
+    $active_popup = $container.find('.coffee-sort-popup.visible')
+    $popup_index = $active_popup.index()
     if $popup_index == 0
-      $next_popup = $('.coffee-sort-popup').eq(2)
+      $next_popup = $container.find('.coffee-sort-popup').eq(2)
     else
-      $next_popup = $('.coffee-sort-popup.visible').first().prev()
+      $next_popup = $active_popup.first().prev()
     setTimeout (->
       $('.coffee-sort-popup.visible').removeClass('visible')
     ), 1
     setTimeout (->
       $next_popup.addClass('visible')
     ), 102
-
-
 
   $arrow_right.on 'click', ->
-    $popup_index = $('.coffee-sort-popup.visible').index()
+    $container = $(this).closest('.popup-container')
+    $active_popup = $container.find('.coffee-sort-popup.visible')
+    $popup_index = $active_popup.index()
     if $popup_index == 2
-      $next_popup = $('.coffee-sort-popup').eq(0)
+      $next_popup = $container.find('.coffee-sort-popup').eq(0)
     else
-      $next_popup = $('.coffee-sort-popup.visible').first().next()
+      $next_popup = $active_popup.first().next()
     setTimeout (->
       $('.coffee-sort-popup.visible').removeClass('visible')
     ), 1
@@ -56,6 +60,36 @@ $(document).ready ->
       $next_popup.addClass('visible')
     ), 102
 
+
+  # $arrow_left.on 'click', ->
+  #   $container = $(this).closest('.popup-container')
+
+  #   $popup_index = $container.find('.coffee-sort-popup.visible').index()
+  #   if $popup_index == 0
+  #     $next_popup = $('.coffee-sort-popup').eq(2)
+  #   else
+  #     $next_popup = $('.coffee-sort-popup.visible').first().prev()
+  #   setTimeout (->
+  #     $('.coffee-sort-popup.visible').removeClass('visible')
+  #   ), 1
+  #   setTimeout (->
+  #     $next_popup.addClass('visible')
+  #   ), 102
+
+  # $arrow_right.on 'click', ->
+  #   $container = $(this).closest('.popup-container')
+
+  #   $popup_index = $container.find('.coffee-sort-popup.visible').index()
+  #   if $popup_index == 2
+  #     $next_popup = $('.coffee-sort-popup').eq(0)
+  #   else
+  #     $next_popup = $('.coffee-sort-popup.visible').first().next()
+  #   setTimeout (->
+  #     $('.coffee-sort-popup.visible').removeClass('visible')
+  #   ), 1
+  #   setTimeout (->
+  #     $next_popup.addClass('visible')
+  #   ), 102
 
 
   $close.on 'click', ()->
