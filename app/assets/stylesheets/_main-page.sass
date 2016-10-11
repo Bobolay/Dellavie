@@ -1,23 +1,33 @@
 .full-page-container
   color: white
   .page-section
-    position: relative
+    position: absolute
+    top: 0
+    width: 100vw
     height: 100vh
     max-height: 0
+    max-height: 100vh
     overflow: hidden
     +transition(1s)
-    +transition-property(max-height)
+    +transition-property("max-height,top")
+    +transform(translateZ(0))
     .coffee-img-container, .coffee-header, .more-info
       opacity: 1
       +transition(0.5s)
       @media #{$medium-up}
         opacity: 0
     &.auto-height
+      //max-height: 100vh
       height: auto
     &.active
+      top: 0
       max-height: 100vh
       .coffee-img-container, .coffee-header, .more-info
         opacity: 1
+
+      & ~ .page-section
+        max-height: 0
+        top: 100vh
     &:last-child.active
       max-height: 20000px
 
