@@ -17,6 +17,9 @@ $(document).on("ready", function(){
     //     F I R E F O X     D E T E C T
     
     $(window).bind('DOMMouseScroll', function(e){
+        if ($('.coffee-sort-popup.visible').length) {
+            return
+        }
         if(e.originalEvent.detail > 0) {
          //scroll down
             delay('custom_scroll', function(){custom_scroll("down");}, 1000, true, false)
