@@ -96,13 +96,15 @@ $popup-img-height: 300px
           +translate(25%,-50%)
 
   .text
-    background-color: white
-    padding: 50px
-    height: calc(80vh - #{$popup-img-height})
+    // background-color: white
+    margin: 50px
+    // height: calc(80vh - #{$popup-img-height})
+    height: calc(80vh - 400px)
+    overflow-y: auto
     @media #{$small-only}
-      height: calc(80vh - 150px)
-      padding: 20px
-      overflow-y: scroll
+      height: calc(80vh - 190px)
+      // padding: 20px
+      margin: 20px 
     .header
       color: $orange
       text-transform: uppercase
