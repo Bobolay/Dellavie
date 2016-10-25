@@ -22,5 +22,9 @@ module Arazzinni
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.i18n.available_locales = [:en, :uk, :ru]
+    config.i18n.default_locale = :en
+
+    Rails.application.config.action_mailer.default_url_options = {host: ENV["#{Rails.env}.host"]}
   end
 end

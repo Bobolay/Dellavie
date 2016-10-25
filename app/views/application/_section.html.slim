@@ -1,0 +1,68 @@
+- slide_products = slide.products.published.sort_by_sorting_position
+.logo = inline_svg "svg/Dellavie-logo-symbol.svg"
+.social-links-container
+  a = inline_svg "svg/Dellavie-social-facebook.svg"
+  a = inline_svg "svg/Dellavie-social-g+.svg"
+  a = inline_svg "svg/Dellavie-social-twitter.svg"
+
+= render "locales_bar"
+
+.slide-navigation
+  .square.active
+  .square
+  .square
+  .square.square-black
+a.go-down
+  p
+    = t("home.main-slider.about-arrow")
+  = inline_svg "svg/Dellavie-arrow.svg"
+.pager
+  .current-number
+    = slide_index + 1
+  .slash &#47;
+  .total-number
+    = @main_slides.count
+.bg-img style="background-image: url(#{asset_path("banners/dellavie-banner-bg-#{slide_index + 1}.jpg")})"
+.coffee-img-container
+  .coffee-img style="background-image: url(#{slide.product_image.url})"
+.row.coffee-header
+  .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
+    .banner-inner-header
+      p
+        = slide.product_title
+      span.top-title
+        = slide.product_subtitle
+      = inline_svg "svg/Dellavie-Logo-text.svg"
+.row.more-info
+  .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
+    .row.more-info
+      .large-6.medium-6.small-12.columns.countries-container.medium-push-6
+        p.title
+          = t("home.main-slider.map-header")
+        .row
+          - slide_products.each do |product|
+            .large-4.medium-4.small-4.columns.country
+              .country-map
+                = embedded_svg_from_absolute_path(product.map_image.path)
+              p.coffee-sort
+                = raw product.map_description
+              .plus
+                = inline_svg "svg/Dellavie-plus.svg"
+
+.popup-dark-background
+.popup-white-background
+.popup-container
+  - slide_products.each do |product|
+    .coffee-sort-popup
+      .close-popup = inline_svg "svg/Dellavie-close.svg"
+      .popup-img
+        .bg-img style="background-image: url(#{product.image.url})"
+        .left-arrow-container.slider-prev
+          = inline_svg "svg/left-arrow.svg"
+        .right-arrow-container.slider-next
+          = inline_svg "svg/right-arrow.svg"
+      .text
+        p.header
+          = product.name
+        p.regular
+          = product.description

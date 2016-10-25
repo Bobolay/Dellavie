@@ -1,0 +1,47 @@
+form method="post" action="/#{I18n.locale}/order"
+
+  .select-label
+    = t("home.contact-form.user_position.label")
+  .select-field
+    select name="order[user_position]"
+      - 5.times do |i|
+        option value=(i+1) selected=("selected" if i == 0)
+          = t("home.contact-form.user_position.option-#{i+1}")
+
+    /p.selected-option
+      = t("home.contact-form.user_position.option-1")
+    span.select-arrow
+      = inline_svg "svg/select-arrow.svg"
+    /.select-block
+      - 5.times do |i|
+        .option
+          = t("home.contact-form.user_position.option-#{i+1}")
+
+  .group
+    input type="text" name="order[name]"
+    span.bar
+    label
+      = t("home.contact-form.name.label")
+  .group
+    input type="text" name="order[email]"
+    span.bar
+    label
+      = t("home.contact-form.email.label")
+  .group
+    input type="text" name="order[phone]"
+    span.bar
+    label
+      = t("home.contact-form.phone.label")
+  .group
+    textarea rows="2" name="order[message]"
+    span.bar
+    label
+      = t("home.contact-form.message.label")
+  button.button type="submit"
+    span
+      = t("home.contact-form.submit-button")
+    .line-left
+    .line-right
+
+  .form-message
+    |Дякуємо, невдовзі ми можливо щось зробимо з цією інформацією.

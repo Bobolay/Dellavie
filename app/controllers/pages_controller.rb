@@ -1,19 +1,17 @@
 class PagesController < ApplicationController
   before_action :set_page_instance, except: [:index]
 
-  self.layout "home"
+  def index
+    set_page_metadata(:home)
+    @testimonials = Testimonial.published.sort_by_sorting_position
+    @properties = Property.first
 
-  def main
-  #   set_page_metadata(:home)
-  end
-
-  def about_us
-
+    @main_slides = MainSlide.published.sort_by_sorting_position
   end
 
   private
 
   def set_page_instance
-  #   set_page_metadata(action_name)
+    set_page_metadata(action_name)
   end
 end

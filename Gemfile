@@ -50,8 +50,8 @@ gem 'bower-rails'
 
 gem "protected_attributes"
 
-#gem 'rails_admin'
-#gem 'rails_admin_nestable'
+gem 'rails_admin'
+gem 'rails_admin_nestable'
 
 gem 'devise'
 
@@ -86,8 +86,18 @@ gem 'rack-page_caching'
 #gem 'attachable', path:"/media/data/pasha/gems/attachable"
 #gem 'cms', path: "/media/data/pasha/gems/cms"
 
-#gem 'cms', github: "pkorenev/cms"
-
 gem 'require_reloader'
 
-gem 'thin'
+gem 'puma'
+
+gem 'globalize'
+gem 'rails_admin_globalize_field'
+
+gem 'russian'
+
+gem 'paperclip'
+
+gem 'cms', github: "pkorenev/cms"
+
+
+gem "figaro"

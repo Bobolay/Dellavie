@@ -30,7 +30,9 @@
   @media #{$small-only}
     top: 20px
     right: 20px
-  p
+  .locale-link
+    color: white
+    display: block
     font-size: 14px
     +transition(1s)
     position: relative
@@ -59,7 +61,7 @@
     &:after
       bottom: 0
   &:hover
-    p
+    .locale-link
       color: $orange
     .line
       +translate(0,0)
@@ -142,19 +144,19 @@
   @media #{$small-only}
     display: none
 
-.first-banner
+.banner-1
   .social-links-container
     a
       &:hover
         .logo
           fill: $orange
-.second-banner
+.banner-2
   .social-links-container
     a
       &:hover
         .logo
           fill: $aqua
-.third-banner
+.banner-3
   .social-links-container
     a
       &:hover

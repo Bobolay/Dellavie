@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
-  root to: "pages#main"
 
-  controller :pages do
+  root as: "root_without_locale", to: "application#root_without_locale"
+
+  devise_for :users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  scope ":locale", locale: /#{I18n.available_locales.map(&:to_s).join("|")}/ do
+    post "order", to: "orders#create"
+    root to: "pages#index"
   end
-
-  # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  # mount Ckeditor::Engine => '/ckeditor'
-  #devise_for :users
-
 
   match "*url", to: "application#render_not_found", via: [:get, :post, :path, :put, :update, :delete]
 end

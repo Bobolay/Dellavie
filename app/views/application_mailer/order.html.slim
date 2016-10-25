@@ -1,0 +1,9 @@
+table
+  - [:user_position, :name, :email, :phone, :message, :locale, :referrer, :session_id].each do |attr|
+    tr
+      td
+        b
+          = attr.to_s.capitalize.gsub("_", " ")
+    tr
+      td
+        = @resource.send(attr) || "-"

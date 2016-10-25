@@ -1,0 +1,32 @@
+- if @testimonials.try(:any?)
+  .dark-bg.feedback-container
+    .feedback-container-header
+      = t("home.customers.header")
+    .row
+      .small-11.medium-11.large-8.small-centered.columns.slider-container
+        .left-arrow-container.slider-prev
+          = inline_svg "svg/left-arrow.svg"
+        .right-arrow-container.slider-next
+          = inline_svg "svg/right-arrow.svg"
+        #bx-pager
+          - @testimonials.each_with_index do |item, index|
+            a.pager-square data-slide-index=index
+
+        img.yami-yam-img src=asset_path('photo/Dellavie-Croissant.png')
+        .row.collapse
+          .large-6.medium-6.small-12.columns
+            ul.slider-1
+              - @testimonials.each do |item|
+                li
+                  .bg-img style="background-image: url(#{item.image.url(:small)})"
+
+          .large-6.medium-6.small-12.columns
+            ul.slider-2
+              - @testimonials.each do |item|
+                li.feedback-1
+                  p.blockquote
+                    = item.description
+                  p.author
+                    | #{item.name},
+                    span
+                      = item.position
