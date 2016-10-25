@@ -57,7 +57,7 @@ gem 'devise'
 
 gem 'enumerize'
 
-#gem 'ckeditor'
+gem 'ckeditor'
 
 #gem 'paperclip'
 
