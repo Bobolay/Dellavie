@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
   root as: "root_without_locale", to: "application#root_without_locale"
 
   devise_for :users
