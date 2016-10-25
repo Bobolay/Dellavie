@@ -141,13 +141,7 @@ module RailsAdminDynamicConfig
 
         config.include_models Product
         config.model Product do
-          # edit do
-          #   field :main_slide
-          #   field :published
-          #   field :map_image
-          #   field :image
-          #   field :translations, :globalize_tabs
-          # end
+          visible false
 
           nested do
             field :published
