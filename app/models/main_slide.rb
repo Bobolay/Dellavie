@@ -11,4 +11,9 @@ class MainSlide < ActiveRecord::Base
   image :background_image
 
   globalize :product_title, :product_subtitle
+
+  has_cache
+  def cache_instances
+    [Pages.home]
+  end
 end

@@ -61,6 +61,10 @@ module RailsAdminDynamicConfig
         ## Cms models
         config.include_models Cms::MetaTags, Cms::Page
 
+        config.model Cms::Page do
+          visible false
+        end
+
         config.model_translation Cms::Page do
 
         end
@@ -197,6 +201,12 @@ module RailsAdminDynamicConfig
             field :session_id
           end
 
+        end
+
+        config.include_models Pages::Home
+
+        config.model Pages::Home do
+          field :seo_tags
         end
       end
     end

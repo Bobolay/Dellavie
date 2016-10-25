@@ -33,4 +33,9 @@ class Property < ActiveRecord::Base
       [k, url]
     end.select(&:present?)]
   end
+
+  has_cache
+  def cache_instances
+    [Pages.home]
+  end
 end

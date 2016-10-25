@@ -8,4 +8,9 @@ class Product < ActiveRecord::Base
   scope :sort_by_sorting_position, -> { order("sorting_position asc") }
 
   belongs_to :main_slide
+
+  has_cache
+  def cache_instances
+    [Pages.home]
+  end
 end
