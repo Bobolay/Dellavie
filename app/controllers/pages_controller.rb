@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   def index
     set_page_metadata(:home)
     @testimonials = Testimonial.published.sort_by_sorting_position
-    @properties = Property.first
+
 
     @main_slides = MainSlide.published.sort_by_sorting_position
   end

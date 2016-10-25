@@ -1,0 +1,16 @@
+form action="/users/sign_in" method="post"
+  .group
+    input.used type="text" name="user[email]"
+    span.bar
+    label
+      = "Email"
+  .group
+    input.used type="password" name="user[password]"
+    span.bar
+    label
+      = "Password"
+  button.button type="submit"
+    span
+      | Go
+    .line-left
+    .line-right

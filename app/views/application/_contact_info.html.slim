@@ -1,0 +1,19 @@
+- properties = Property.first
+- if properties
+  .large-6.medium-6.small-12.columns.contact-info
+    .background-svg style="background-image: url(#{asset_path('svg/Dellavie-D-letter.svg')})"
+    .logo = inline_svg "svg/Dellavie-logo.svg"
+    .address
+      = t("home.contacts-block.address")
+    .social-links-container
+      - properties.social_links.each do |k, url|
+        a href=url
+          = inline_svg "svg/social-#{k}.svg"
+    p
+      - properties.get_phones.each do |phone|
+        a.phone href=phone_url(phone)
+          = phone
+    p
+      - properties.get_emails.each do |email|
+        a.email href=email_url(email)
+          = email

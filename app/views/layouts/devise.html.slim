@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    = seo_tags
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    = stylesheet_link_tag    "application", media: 'all', 'data-turbolinks-track' => true
+    link href="/assets/favicon/dellavie-favicon-16x16.svg" rel="icon" type="image/svg+xml"
+    link href="/assets/favicon/dellavie-favicon-256x256.png" rel="icon" sizes="256x256" type="image/png"
+  body
+    .contact-us-container#form
+      .bg-img style="background-image: url(#{asset_path('photo/Dellavie-footer-bg.jpg')})"
+      .contact-us-header
+        .header
+          = t("devise.header")
+        .subheader
+          = t("devise.description")
+      .row.collapse
+        .small-11.medium-11.large-9.xlarge-8.small-centered.columns
+          .row.collapse
+            = render "contact_info"
+
+            .large-6.medium-6.small-12.columns.form-container
+              p.header
+                /= t("home.contact-form.header")
+              .devise-content
+                = yield
+
+      = render "footer"
+
