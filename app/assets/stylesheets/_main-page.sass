@@ -36,20 +36,24 @@
 
 
 .about-us
-  padding: 200px 0 100px
+  padding: 100px 0
   overflow: hidden
   @media #{$small-only}
     padding: 50px 0
   @media #{$landscape}
     padding: 100px 0
+  @media #{$xxlarge-up}
+    padding: 200px 0 100px
   .about-us-header
     position: relative
     z-index: 1
     text-align: center
     svg
-      height: 126px
+      height: 100px
       @media #{$small-only}
         height: 50px
+      @media #{$xxlarge-up}
+        height: 126px
     .subheader
       +marck
       font-size: 3.8125rem
@@ -304,7 +308,7 @@
         font-size: 1.5rem
         display: inline-block
         width: 300px
-        margin-top: 100px
+        margin-top: 40px
         position: relative
         @media #{$small-only}
           max-width: 80%
@@ -364,10 +368,6 @@
   position: relative
   overflow: hidden
   padding: 3rem 0 5rem
-  @media #{$small-only}
-    height: auto
-  @media #{$landscape}
-    height: auto
   .bg-img
     left: 0
     top: 0
@@ -402,8 +402,6 @@
     @media #{$small-only}
       padding: 30px 0
       height: auto
-    @media #{$xxlarge-up}
-      height: 60vh
   .contact-info
     background-color: $brown
     overflow: hidden
@@ -501,3 +499,16 @@
           fill: $orange
     .dellavie
       float: right
+
+.logo
+  position: fixed
+  cursor: pointer
+  top: 40px
+  left: 40px
+  z-index: 3
+  svg
+    width: 40px
+    height: 40px
+  @media #{$small-only}
+    top: 20px
+    left: 20px

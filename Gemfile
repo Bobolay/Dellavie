@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -98,6 +98,7 @@ gem 'russian'
 gem 'paperclip'
 
 gem 'cms', github: "pkorenev/cms"
+#gem 'cms'
 
 
 gem "figaro"

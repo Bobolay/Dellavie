@@ -1,10 +1,11 @@
 .full-page-container
+  - slide_index = 0
   - @main_slides.each_with_index do |main_slide, index|
     .page-section.active class="banner-#{index + 1}"
       = render "section", slide: main_slide, slide_index: index
+      - slide_index+=1
 
   .page-section.auto-height
-
     .dark-bg.about-us
       .about-us-header
         = inline_svg "svg/Dellavie-Logo-text.svg"
@@ -75,3 +76,4 @@
 
       = render "footer"
 
+.logo = inline_svg "svg/Dellavie-logo-symbol.svg"

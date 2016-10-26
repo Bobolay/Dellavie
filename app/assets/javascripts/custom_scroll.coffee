@@ -3,6 +3,7 @@ $(document).on "ready", ->
   $(".full-page-container .page-section").first().addClass("active")
   $active_section_index = $(".page-section.active").index()
 
+
   $('.go-down').on 'click', ->
     $next_section = $(".page-section").eq(3)
     $(".page-section.active").removeClass("active")
@@ -14,6 +15,7 @@ $(document).on "ready", ->
     $next_section = $(".page-section").eq($index)
     $(".page-section.active").removeClass("active")
     $next_section.addClass("active")
+
 
   window.custom_scroll = (direction = "down") ->
 
@@ -40,3 +42,9 @@ $(document).on "ready", ->
     if $next_section.length > 0
       $active_section.removeClass('active')
       $next_section.addClass('active')
+
+
+    $('.logo').on "click", ->
+      $active_section.removeClass('active')
+      $(".full-page-container .page-section").first().addClass("active")
+
