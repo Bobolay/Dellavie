@@ -2,9 +2,9 @@
   .row
     .small-11.medium-11.large-8.small-centered.columns
       .v-studio
-        = inline_svg "svg/voronin-logo.svg"
-        a href=""
-          = t("footer.developed-by", year: 2016)
+        a href="http://voroninstudio.eu" target="_blank" = inline_svg "svg/voronin-logo.svg"
+        span
+          = t("footer.developed-by", year: 2016, url: "http://voroninstudio.eu")
       .dellavie
         p
           = t("footer.copyright")

@@ -302,12 +302,13 @@
         span
           text-transform: none
           font-weight: initial
+          display: block
       .blockquote
         +marck
         line-height: 1.5
         font-size: 1.5rem
         display: inline-block
-        width: 300px
+        width: 320px
         margin-top: 40px
         position: relative
         @media #{$small-only}
@@ -493,10 +494,8 @@
         display: inline-block
         @media #{$small-only}
           display: none
-      &:hover
-        color: $orange
-        svg
-          fill: $orange
+        &:hover
+          color: $orange
     .dellavie
       float: right
 
