@@ -81,7 +81,7 @@ module RailsAdminDynamicConfig
           field :description
         end
 
-        config.include_models Text
+        config.include_models Text, Cms::Text
 
         config.model Text do
           edit do
