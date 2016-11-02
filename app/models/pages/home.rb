@@ -1,6 +1,6 @@
 class Pages::Home < Cms::Page
   def url(locale = I18n.locale)
-    "/#{locale}"
+    "/#{locale}.html"
   end
 
   def urls_for_locales(locales = Cms.config.provided_locales)
