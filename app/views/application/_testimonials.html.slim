@@ -25,7 +25,7 @@
               - @testimonials.each do |item|
                 li.feedback-1
                   p.blockquote
-                    = item.description
+                    = raw item.description
                   p.author
                     | #{item.name} 
                     span
