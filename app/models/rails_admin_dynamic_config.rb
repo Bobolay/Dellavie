@@ -107,8 +107,11 @@ module RailsAdminDynamicConfig
           end
         end
 
-        config.model_translation Cms::Text do
+        config.model Cms::Text do
           visible false
+        end
+
+        config.model_translation Cms::Text do
           field :locale, :hidden
           field :content
         end
