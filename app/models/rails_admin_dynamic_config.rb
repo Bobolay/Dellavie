@@ -81,9 +81,9 @@ module RailsAdminDynamicConfig
           field :description
         end
 
-        config.include_models Cms::Text
+        config.include_models Text, Cms::Text
 
-        config.model Cms::Text do
+        config.model Text do
           edit do
             field :key
             field :translations, :globalize_tabs
@@ -105,6 +105,10 @@ module RailsAdminDynamicConfig
               end
             end
           end
+        end
+
+        config.model Cms::Text do
+          visible false
         end
 
         config.model_translation Cms::Text do
