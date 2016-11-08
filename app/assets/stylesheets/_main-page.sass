@@ -281,7 +281,9 @@
       height: 500px
       position: relative
       @media #{$small-only}
-        height: 400px
+        height: 550px
+      @media only screen and (max-width: 320px)
+        height: 700px
     .feedback-1
       background-color: $orange
     .feedback-2
@@ -313,6 +315,8 @@
         position: relative
         @media #{$small-only}
           max-width: 80%
+          line-height: 1.4
+          font-size: 1.3rem
         &:before, &:after
           +marck
           position: absolute
@@ -335,7 +339,7 @@
           right: -20px
           @media #{$small-only}
             font-size: 200px
-            bottom: -40px
+            bottom: -50px
             right: 0
     .yami-yam-img
       position: absolute
