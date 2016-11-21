@@ -27,7 +27,11 @@ submit_form = (e)->
   url = $form.attr("action")
   method = $form.attr("method")
 
-  $form.find(".form-message").addClass("show")
+  
+  $(".form-message-background").fadeIn()
+  setTimeout (->
+    $(".form-message-background").fadeOut()
+  ), 10000
 
   $.ajax(
     type: method

@@ -452,8 +452,6 @@
       margin-top: 90px
       margin-bottom: 20px
       left: initial
-      @media #{$small-only}
-        margin-top: 50px
       a
         &:hover
           svg
@@ -466,7 +464,7 @@
     .email
       position: relative
       color: $orange
-  .form-container
+  .form-container 
     background-color: white
     .header
       color: $orange
@@ -516,3 +514,65 @@
   @media #{$small-only}
     top: 20px
     left: 20px
+
+.social-links-container
+  @media #{$small-only}
+    display: block !important
+
+.form-message-background
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background-color: rgba($brown, 0.75)
+  display: none
+  .form-message
+    position: absolute
+    opacity: 1
+    width: 700px
+    height: 40vh
+    top: calc((100vh - 40vh)/2)
+    left: 50%
+    background-color: white
+    text-align: center
+    +translate(-50%,0)
+    @media #{$small-only}
+      width: calc(100vw - 2rem)
+      height: 60vh
+    @media #{$medium-only}
+      width: calc(100vw - 2rem)
+      max-width: 700px
+    .text
+      position: absolute
+      max-width: 70%
+      top: 50%
+      left: 50%
+      text-align: center
+      +translate(-50%,-50%)
+      @media #{$small-only}
+        max-width: 90%
+    .header
+      text-transform: uppercase
+      color: $orange
+      line-height: 1
+      font-size: 36px
+      font-weight: bold
+      letter-spacing: 1px
+      margin: 0 auto
+    .regular
+      color: $grey
+      font-size: 14px
+      margin: 0 auto
+      margin-top: 30px
+    .close-form-message
+      position: absolute
+      right: 10px
+      top: 10px
+      width: 30px
+      height: 30px
+      cursor: pointer
+      svg
+        width: 30px
+        height: 30px
+        fill: $orange

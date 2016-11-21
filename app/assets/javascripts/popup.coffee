@@ -74,3 +74,12 @@ $(document).ready ->
       $popup.removeClass('visible')
     {except: ".coffee-sort-popup"}
   )
+
+  $('.close-form-message').on 'click', ()->
+    $(".form-message-background").fadeOut()
+
+  $.clickOut(".form-message",
+    ()->
+      $(".form-message-background").fadeOut()
+    {except: ".form-message"}
+  )

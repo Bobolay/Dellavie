@@ -20,6 +20,6 @@
 #= require custom_scroll
 #= require detect_scroll
 
-#= require select
-
 #= require popup
+
+#= require select
