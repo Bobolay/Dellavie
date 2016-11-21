@@ -141,6 +141,7 @@ module RailsAdminDynamicConfig
           field :facebook_url
           field :google_plus_url
           field :twitter_url
+          field :vk
         end
 
         config.include_models Product

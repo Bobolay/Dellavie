@@ -4,6 +4,7 @@ class Property < ActiveRecord::Base
   field :facebook_url
   field :google_plus_url
   field :twitter_url
+  field :vk_url
 
   def get_phones
     str = phones
@@ -24,7 +25,7 @@ class Property < ActiveRecord::Base
   end
 
   def social_links
-    Hash[[:facebook, :google_plus, :twitter].map do |k|
+    Hash[[:facebook, :google_plus, :twitter, :vk].map do |k|
       url = send("#{k}_url")
       if url.blank?
         next false
