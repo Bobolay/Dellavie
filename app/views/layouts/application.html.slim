@@ -8,22 +8,8 @@ html
     = csrf_meta_tags
     link href=asset_path("favicon/dellavie-favicon-16x16.svg") rel="icon" type="image/svg+xml"
     link href=asset_path("favicon/dellavie-favicon-256x256.png") rel="icon" sizes="256x256" type="image/png"
-    sass:
-      body
-        margin: 0
-        padding: 0
-        box-sizing: border-box
-      #preloader
-        background: blue
-        position: fixed
-        top: 0
-        left: 0
-        height: 100%
-        width: 100%
-        z-index: 9999
-  body
-    #preloader
-    = yield
     = stylesheet_link_tag    "application", media: 'all', 'data-turbolinks-track' => true
+  body
+    = yield
     = javascript_include_tag "application", 'data-turbolinks-track' => true
     
