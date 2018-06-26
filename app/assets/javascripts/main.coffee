@@ -5,7 +5,7 @@ $(document).on "ready", ->
     $link = $(this)
     href = $link.attr("href")
     target_top = $(href).offset().top
-    $("body").animate({scrollTop: target_top})
+    $("html, body").animate({scrollTop: target_top})
 
   # $('.logo').on 'click', ->
   #   $('html, body').animate({scrollTop : 0}, 800)
