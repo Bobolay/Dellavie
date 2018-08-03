@@ -1,4 +1,4 @@
-asset 'foundation-sites'
+asset 'foundation-sites','6.2.3'
 
 asset "sass-css3-mixins"
 
@@ -7,3 +7,5 @@ asset "jquery-ui"
 asset "sass-burger"
 
 asset "jquery-touchswipe"
+
+asset "jquery",'2.2.4'

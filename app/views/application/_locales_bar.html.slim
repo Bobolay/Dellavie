@@ -1,9 +1,16 @@
 .choose-language
-  - [:uk, :en].each do |locale|
-    - if locale != I18n.locale.to_sym
-      a.locale-link href="/#{locale}"
-        = locale
-      .line
+  .wrapper
+    - [:uk, :en].each do |locale|
+      - if locale != I18n.locale.to_sym
+        a.locale-link href="/#{locale}"
+          = locale
+        .line
+
+  / - [:uk, :en].each do |locale|
+  /   - if locale != I18n.locale.to_sym
+  /     a.locale-link href="/#{locale}"
+  /       = locale
+  /     .line
 
 /.locales-bar
   - Cms.config.provided_locales.each do |locale|

@@ -1,11 +1,11 @@
 .full-page-container
-  - slide_index = 0
-  - @main_slides.each_with_index do |main_slide, index|
-    .page-section.active class="banner-#{index + 1}"
-      = render "section", slide: main_slide, slide_index: index
-      - slide_index+=1
-
+  / - slide_index = 0
+  / - @main_slides.each_with_index do |main_slide, index|
+  /   .page-section.active class="banner-#{index + 1}"
+  /     = render "section", slide: main_slide, slide_index: index
+  /     - slide_index+=1
   .page-section.auto-height
+    = render "slider"
     .dark-bg.about-us
       .about-us-header
         = inline_svg "svg/Dellavie-Logo-text.svg"
@@ -14,7 +14,7 @@
       .row
         .large-6.medium-12.end.columns
           img.coffee-grain-img src=asset_path('photo/Dellavie-about-coffee-beans-v1.jpg')
-      .row  
+      .row
         .large-6.large-push-6.medium-12.columns
           .main-text
             = t("home.idea-html")

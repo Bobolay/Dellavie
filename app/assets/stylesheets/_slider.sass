@@ -1,0 +1,95 @@
+.slider1
+  .mainlidet1.goode
+    .goode1-slider-for
+    .goode1-slider-nav
+      li
+        height: 100vh
+        .choose-language
+          width: 100%
+          height: 24px
+          text-align: center
+          cursor: pointer
+          // z-index: 10
+          .wrapper
+            position: absolute
+            top: 50px
+            right: 82%
+            @media #{$medium-only}
+              right: 83%
+            @media #{$small-only}
+              top: 0
+              right: 66%
+          a
+            width: 50px
+        .coffee-img-container
+          position: absolute
+          width: 60vw
+          height: 100vh
+          z-index: 2
+          @media #{$small-only}
+            width: 100vw
+          @media #{$xxlarge-up}
+            width: 70vw
+          .coffee-img
+            position: absolute
+            background-size: contain
+            background-repeat: no-repeat
+            width: 100%
+            height: 100%
+            background-position: center
+            @media only screen and (min-width:1440px)
+              width: 85%
+              height: 120%
+        .coffee-header
+          position: relative
+          @media #{$small-only}
+            z-index: 2
+        .banner-inner-header
+          position: relative
+          width: 600px
+          margin: 0 auto
+          margin-top: 10vh
+          z-index: 1
+          @media #{$small-only}
+            margin-top: 20vh
+          p
+            font-size: 8.125rem
+            text-transform: uppercase
+            line-height: 1
+            letter-spacing: 5px
+            +bold
+          .top-title
+            position: absolute
+            +marck
+            font-size: 1.75rem
+            left: 3rem
+            top: -1rem
+          svg
+            position: absolute
+            height: 2.75rem
+            left: 5rem
+            bottom: -2.5rem
+          @media #{$small-only}
+            width: 260px
+            z-index: 1
+            p
+              font-size: 2.5rem
+            .top-title
+              left: 50%
+              +translate(-50%,0)
+              top: -1.25rem
+              font-size: 1.25rem
+            svg
+              left: 50%
+              +translate(-50%,0)
+              height: 1.5rem
+              bottom: -1.5rem
+        .coffee-sort-popup
+          left: 30%
+        .popup-white-background
+          left: 30%
+        &.second
+          .coffee-sort-popup
+            left: 50%
+          .popup-white-background
+            left: 50%

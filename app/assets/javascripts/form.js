@@ -14,3 +14,10 @@ $(document).ready(function() {
       $this.removeClass('used');
   });
 });
+
+
+
+// $( ".country" ).click(function() {
+//   $index = $(this).index()
+//   $container = $(this).closest('.page-section')
+// });

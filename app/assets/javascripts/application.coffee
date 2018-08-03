@@ -9,6 +9,7 @@
 #= require plugins/delay
 #= require plugins/global
 #= require plugins/clickout
+#= require plugins/slick.min
 
 #= require main
 
@@ -23,3 +24,5 @@
 #= require popup
 
 #= require select
+
+#= require slider

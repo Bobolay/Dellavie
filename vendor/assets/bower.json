@@ -1,10 +1,11 @@
 {
   "name": "dsl-generated-dependencies",
   "dependencies": {
-    "foundation-sites": "latest",
+    "foundation-sites": "6.2.3",
     "sass-css3-mixins": "latest",
     "jquery-ui": "latest",
     "sass-burger": "latest",
-    "jquery-touchswipe": "latest"
+    "jquery-touchswipe": "latest",
+    "jquery": "2.2.4"
   }
 }

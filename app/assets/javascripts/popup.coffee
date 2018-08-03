@@ -1,14 +1,14 @@
 $(document).ready ->
-  
+
   $popup_dark_bg = $('.popup-dark-background')
   $popup_white_bg = $('.popup-white-background')
-  
+
   $popup = $('.coffee-sort-popup')
   $close = $('.close-popup')
 
   $('.country').on 'click', ->
     $index = $(this).index()
-    $container = $(this).closest('.page-section')
+    $container = $(this).closest('.united')
 
     $popup = $container.find(".coffee-sort-popup")
     $popup_dark_bg = $container.find(".popup-dark-background")
@@ -27,6 +27,10 @@ $(document).ready ->
 
   $arrow_left = $('.coffee-sort-popup .left-arrow-container')
   $arrow_right = $('.coffee-sort-popup .right-arrow-container')
+
+
+
+
 
 
 
