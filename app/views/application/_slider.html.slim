@@ -9,33 +9,15 @@
           a = inline_svg "svg/Dellavie-social-facebook.svg"
           a = inline_svg "svg/Dellavie-social-g+.svg"
           a = inline_svg "svg/Dellavie-social-twitter.svg"
-
-        = render "locales_bar"
-
-        .slide-navigation
-
-
-        //go-down
-        / a.go-down
-        /   p
-        /     = t("home.main-slider.about-arrow")
-        /   = inline_svg "svg/Dellavie-arrow.svg"
-        // pager
-        .pager
-          .current-number 1
-          .slash &#47;
-          .total-number 3
-        // bg img
-        .bg-img style="background-image: url(#{asset_path("banners/blue.jpg")})"
+        .bg-img style="background-image: url(#{asset_path("banners/Dellavie-banner-bg-1.jpg")})"
         // coffee
         .coffee-img-container
-          .coffee-img style="background-image: url(#{asset_path("special.png")})"
+          .coffee-img style="background-image: url(#{asset_path("banners/exclusif.png")})"
         .row.coffee-header
           .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
             .banner-inner-header
               p exclusif
-              span.top-title
-                / = slide.product_subtitle
+              span.top-title coffee
               = inline_svg "svg/Dellavie-Logo-text.svg"
         // maps
         .row.more-info
@@ -46,7 +28,7 @@
                 .row
                   .large-4.medium-4.small-4.columns.country
                     .country-map
-                      = inline_svg "svg/arabicaguatemala.svg"
+                      = inline_svg "svg/Dellavie-countries-Brasil"
                     p.coffee-sort
                       | Arabica
                       br
@@ -55,7 +37,7 @@
                       = inline_svg "svg/Dellavie-plus.svg"
                   .large-4.medium-4.small-4.columns.country
                     .country-map
-                      = inline_svg "svg/arabicaguatemala.svg"
+                      = inline_svg "svg/Dellavie-countries-Colombia.svg"
                     p.coffee-sort
                       | Arabica
                       br
@@ -64,7 +46,7 @@
                       = inline_svg "svg/Dellavie-plus.svg"
                   .large-4.medium-4.small-4.columns.country
                     .country-map
-                      = inline_svg "svg/arabicaguatemala.svg"
+                      = inline_svg "svg/Dellavie-countries-Ephiopia.svg"
                     p.coffee-sort
                       | Arabica
                       br
@@ -114,7 +96,7 @@
 
 
 
-
+      // slide 2
       li.united.second
         // social end local
         .social-links-container
@@ -122,26 +104,13 @@
           a = inline_svg "svg/Dellavie-social-g+.svg"
           a = inline_svg "svg/Dellavie-social-twitter.svg"
 
-        = render "locales_bar"
 
         .slide-navigation
 
-
-        //go-down
-        / a.go-down
-        /   p
-        /     = t("home.main-slider.about-arrow")
-        /   = inline_svg "svg/Dellavie-arrow.svg"
-        // pager
-        .pager
-          .current-number 2
-          .slash &#47;
-          .total-number 3
-        // bg img
-        .bg-img style="background-image: url(#{asset_path("banners/bg.jpg")})"
+        .bg-img style="background-image: url(#{asset_path("banners/blue.jpg")})"
         // coffee
         .coffee-img-container
-          .coffee-img style="background-image: url(#{asset_path("special.png")})"
+          .coffee-img style="background-image: url(#{asset_path("banners/special.png")})"
         .row.coffee-header
           .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
             .banner-inner-header
@@ -158,7 +127,7 @@
                 .row
                   .large-4.medium-4.small-4.columns.country
                     .country-map
-                      = inline_svg "svg/arabicaguatemala.svg"
+                      = inline_svg "svg/Dellavie-countries-Ephiopia.svg"
                     p.coffee-sort
                       | Arabica
                       br
@@ -167,7 +136,7 @@
                       = inline_svg "svg/Dellavie-plus.svg"
                   .large-4.medium-4.small-4.columns.country
                     .country-map
-                      = inline_svg "svg/arabicaguatemala.svg"
+                      = inline_svg "svg/Dellavie-countries-Brasil"
                     p.coffee-sort
                       | Arabica
                       br
@@ -224,4 +193,260 @@
                 = inline_svg "svg/right-arrow.svg"
             .text
               p.header arabica ethiopia5
+              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+
+
+      // slide 3
+      li.united.third
+        .social-links-container
+          a = inline_svg "svg/Dellavie-social-facebook.svg"
+          a = inline_svg "svg/Dellavie-social-g+.svg"
+          a = inline_svg "svg/Dellavie-social-twitter.svg"
+
+
+        .slide-navigation
+
+        .bg-img style="background-image: url(#{asset_path("banners/dellavie-banner-bg-3")})"
+        // coffee
+        .coffee-img-container
+          .coffee-img style="background-image: url(#{asset_path("banners/original.png")})"
+        .row.coffee-header
+          .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
+            .banner-inner-header
+              p exclusif
+              span.top-title
+                / = slide.product_subtitle
+              = inline_svg "svg/Dellavie-Logo-text.svg"
+        / // maps
+        .row.more-info
+          .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
+            .row.more-info
+              .large-6.medium-6.small-12.columns.countries-container.medium-push-6
+                p.title Is a blend of
+                .row
+                  .large-4.medium-4.small-4.columns.country
+                    .country-map
+                      = inline_svg "svg/Dellavie-countries-Ephiopia.svg"
+                    p.coffee-sort
+                      | Arabica
+                      br
+                      | Brazil
+                    .plus
+                      = inline_svg "svg/Dellavie-plus.svg"
+                  .large-4.medium-4.small-4.columns.country
+                    .country-map.bg
+                      = inline_svg "svg/arabica_colombia.svg"
+                    p.coffee-sort
+                      | Arabica
+                      br
+                      | Brazil
+                    .plus
+                      = inline_svg "svg/Dellavie-plus.svg"
+                  .large-4.medium-4.small-4.columns.country
+                    .country-map
+                      = inline_svg "svg/Dellavie-countries-India.svg"
+                    p.coffee-sort
+                      | Arabica
+                      br
+                      | Brazil
+                    .plus
+                      = inline_svg "svg/Dellavie-plus.svg"
+
+
+
+
+        .popup-dark-background
+        .popup-white-background
+        .popup-container
+          .coffee-sort-popup
+            .close-popup = inline_svg "svg/Dellavie-close.svg"
+            .popup-img
+              .bg-img style="background-image: url(#{asset_path("photo/Dellavie-pop-up-toning-Colambia-supremo.jpg")})"
+              .left-arrow-container.slider-prev
+                = inline_svg "svg/left-arrow.svg"
+              .right-arrow-container.slider-next
+                = inline_svg "svg/right-arrow.svg"
+            .text
+              p.header arabica ethiopia7
+              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+
+          .coffee-sort-popup
+            .close-popup = inline_svg "svg/Dellavie-close.svg"
+            .popup-img
+              .bg-img style="background-image: url(#{asset_path("photo/Dellavie-pop-up-toning-Colambia-supremo.jpg")})"
+              .left-arrow-container.slider-prev
+                = inline_svg "svg/left-arrow.svg"
+              .right-arrow-container.slider-next
+                = inline_svg "svg/right-arrow.svg"
+            .text
+              p.header arabica ethiopia8
+              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+
+          .coffee-sort-popup
+            .close-popup = inline_svg "svg/Dellavie-close.svg"
+            .popup-img
+              .bg-img style="background-image: url(#{asset_path("photo/Dellavie-pop-up-toning-Colambia-supremo.jpg")})"
+              .left-arrow-container.slider-prev
+                = inline_svg "svg/left-arrow.svg"
+              .right-arrow-container.slider-next
+                = inline_svg "svg/right-arrow.svg"
+            .text
+              p.header arabica ethiopia9
+              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+
+
+
+      // slider 4
+      li.united.fourth
+        // third end local
+        .social-links-container
+          a = inline_svg "svg/Dellavie-social-facebook.svg"
+          a = inline_svg "svg/Dellavie-social-g+.svg"
+          a = inline_svg "svg/Dellavie-social-twitter.svg"
+
+
+        .slide-navigation
+
+        .bg-img style="background-image: url(#{asset_path("banners/yelllow.jpg")})"
+        // coffee
+        .coffee-img-container
+          .coffee-img style="background-image: url(#{asset_path("banners/supreme.png")})"
+        .row.coffee-header
+          .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
+            .banner-inner-header
+              p exclusif
+              span.top-title
+                / = slide.product_subtitle
+              = inline_svg "svg/Dellavie-Logo-text.svg"
+        / // maps
+        .row.more-info
+          .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
+            .row.more-info
+              .large-6.medium-6.small-12.columns.countries-container.medium-push-6
+                p.title Is a blend of
+                .row
+                  .large-4.medium-4.small-4.columns.country
+                    .country-map
+                      = inline_svg "svg/arabicaburundi.svg"
+                    p.coffee-sort
+                      | Arabica
+                      br
+                      | Brazil
+                    .plus
+                      = inline_svg "svg/Dellavie-plus.svg"
+                  .large-4.medium-4.small-4.columns.country
+                    .country-map.smolle
+                      = inline_svg "svg/robustamexico.svg"
+                    p.coffee-sort
+                      | Arabica
+                      br
+                      | Brazil
+                    .plus
+                      = inline_svg "svg/Dellavie-plus.svg"
+                  .large-4.medium-4.small-4.columns.country
+                    .country-map
+                      = inline_svg "svg/arabicaguatemala.svg"
+                    p.coffee-sort
+                      | Arabica
+                      br
+                      | Brazil
+                    .plus
+                      = inline_svg "svg/Dellavie-plus.svg"
+
+
+
+
+        .popup-dark-background
+        .popup-white-background
+        .popup-container
+          .coffee-sort-popup
+            .close-popup = inline_svg "svg/Dellavie-close.svg"
+            .popup-img
+              .bg-img style="background-image: url(#{asset_path("photo/Dellavie-pop-up-toning-Colambia-supremo.jpg")})"
+              .left-arrow-container.slider-prev
+                = inline_svg "svg/left-arrow.svg"
+              .right-arrow-container.slider-next
+                = inline_svg "svg/right-arrow.svg"
+            .text
+              p.header arabica ethiopia10
+              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+
+          .coffee-sort-popup
+            .close-popup = inline_svg "svg/Dellavie-close.svg"
+            .popup-img
+              .bg-img style="background-image: url(#{asset_path("photo/Dellavie-pop-up-toning-Colambia-supremo.jpg")})"
+              .left-arrow-container.slider-prev
+                = inline_svg "svg/left-arrow.svg"
+              .right-arrow-container.slider-next
+                = inline_svg "svg/right-arrow.svg"
+            .text
+              p.header arabica ethiopia11
+              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+
+          .coffee-sort-popup
+            .close-popup = inline_svg "svg/Dellavie-close.svg"
+            .popup-img
+              .bg-img style="background-image: url(#{asset_path("photo/Dellavie-pop-up-toning-Colambia-supremo.jpg")})"
+              .left-arrow-container.slider-prev
+                = inline_svg "svg/left-arrow.svg"
+              .right-arrow-container.slider-next
+                = inline_svg "svg/right-arrow.svg"
+            .text
+              p.header arabica ethiopia12
+              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+
+      /slider 5
+      li.united.fifth
+        // third end local
+        .social-links-container
+          a = inline_svg "svg/Dellavie-social-facebook.svg"
+          a = inline_svg "svg/Dellavie-social-g+.svg"
+          a = inline_svg "svg/Dellavie-social-twitter.svg"
+
+
+        .slide-navigation
+        .bg-img style="background-image: url(#{asset_path("banners/bg.jpg")})"
+        // coffee
+        .coffee-img-container
+          .coffee-img style="background-image: url(#{asset_path("banners/decafeine.png")})"
+        .row.coffee-header
+          .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
+            .banner-inner-header
+              p exclusif
+              span.top-title
+                / = slide.product_subtitle
+              = inline_svg "svg/Dellavie-Logo-text.svg"
+        / // maps
+        .row.more-info
+          .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
+            .row.more-info
+              .large-6.medium-6.small-12.columns.countries-container.medium-push-6.country
+                p.title 100% arabica
+                .row
+                  .large-4.medium-4.small-4.columns.country
+                    .country-map
+                      = inline_svg "svg/arabicaguatemala.svg"
+                    p.coffee-sort
+                      | Arabica
+                      br
+                      | Colombia
+                    .plus
+                      = inline_svg "svg/Dellavie-plus.svg"
+
+
+
+
+        .popup-dark-background
+        .popup-white-background
+        .popup-container
+          .coffee-sort-popup
+            .close-popup = inline_svg "svg/Dellavie-close.svg"
+            .popup-img
+              .bg-img style="background-image: url(#{asset_path("photo/Dellavie-pop-up-toning-Colambia-supremo.jpg")})"
+              .left-arrow-container.slider-prev
+                = inline_svg "svg/left-arrow.svg"
+              .right-arrow-container.slider-next
+                = inline_svg "svg/right-arrow.svg"
+            .text
+              p.header arabica ethiopia13
               p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.

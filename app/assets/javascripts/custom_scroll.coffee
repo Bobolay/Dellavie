@@ -3,11 +3,11 @@ $(document).on "ready", ->
   $(".full-page-container .page-section").first().addClass("active")
   $active_section_index = $(".page-section.active").index()
 
-
-  $('.go-down').on 'click', ->
-    $next_section = $(".page-section").eq(3)
-    $(".page-section.active").removeClass("active")
-    $next_section.addClass("active")
+  #
+  # $('.go-down').on 'click', ->
+  #   $next_section = $(".page-section").eq(3)
+  #   $(".page-section.active").removeClass("active")
+  #   $next_section.addClass("active")
 
   $('.square').on 'click', ->
     $index = $(this).index()
@@ -47,4 +47,3 @@ $(document).on "ready", ->
     $('.logo').on "click", ->
       $active_section.removeClass('active')
       $(".full-page-container .page-section").first().addClass("active")
-

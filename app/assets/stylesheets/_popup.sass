@@ -12,11 +12,13 @@
     z-index: 3
 
 .popup-white-background
-  position: absolute
+  position: relative
   opacity: 0
   width: 700px
   height: 80vh
-  top: calc((100vh - 80vh)/2)
+  // top: calc((100vh - 80vh)/2)
+  // top: calc((20vh - 120vh)/2)
+  top: -60%
   left: 50%
   background-color: white
   +translate(-50%,0)
@@ -28,18 +30,26 @@
     z-index: 3
   @media #{$small-only}
     width: calc(100vw - 2rem)
+    top: -75%
   @media #{$medium-only}
     width: calc(100vw - 2rem)
     max-width: 700px
 
 $popup-img-height: 300px
 
+.popup-container
+  position: relative
+  bottom: 140%
+  @media #{$small-only}
+    bottom: 155%
 .coffee-sort-popup
   position: absolute
   opacity: 0
   width: 700px
   height: 80vh
-  top: calc((100vh - 80vh)/2)
+  top: -50%
+  // top: calc((100vh - 80vh)/2)
+  // top: calc((20vh - 120vh)/2)
   left: 50%
   +translate(-50%,0)
   // +transition(1s)

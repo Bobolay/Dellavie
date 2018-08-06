@@ -87,6 +87,15 @@
       .country-map
         *
           +transition(0.25s)
+        &.smolle
+          padding-bottom: 75px
+          @media (max-width: 1025px)
+            padding-bottom: 55px
+        &.bg
+          svg
+            height: 135px
+            @media (max-width: 1025px) 
+              height: 100px
         @media #{$small-only}
           display: none
       .coffee-sort
@@ -94,7 +103,7 @@
         height: 60px
         @media #{$small-only}
           font-size: 0.875em
-          height: 50px    
+          height: 50px
       .plus
         margin: 20px auto 0
         svg
@@ -132,4 +141,3 @@
         svg
           .plus
             fill: $violet
-

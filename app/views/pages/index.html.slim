@@ -18,6 +18,7 @@
         .large-6.large-push-6.medium-12.columns
           .main-text
             = t("home.idea-html")
+      = render "sliderin"
       .advantages
         .coffee-grain = inline_svg "svg/Dellavie-coffee-bean-icon.svg"
         p.header
@@ -77,6 +78,14 @@
       = render "footer"
 
 .logo = inline_svg "svg/Dellavie-logo-symbol.svg"
+
+
+= render "locales_bar"
+
+a.go-down
+  p
+    = t("home.main-slider.about-arrow")
+  = inline_svg "svg/Dellavie-arrow.svg"
 
 .form-message-background
   .form-message

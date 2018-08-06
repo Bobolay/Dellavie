@@ -1,9 +1,52 @@
-.slider1
+.slider1, .slider2
+  &.slider2
+    padding: 50px 0
+    .mainlidet1.goode
+      .goode12-slider-nav
+        li
+          background-color: #312b2d
+          @media #{$small-only}
+            height: 200vh
+          .banner-inner-header
+            color: $orange
+            text-align: left
+            p
+              font-size: 72px
+              font-family: 'Roboto Slab', serif
+              @media #{$small-only}
+                font-size: 45px
+            span
+              top: -5rem
+              font-size: 72px
+              font-family: 'Marck Script', cursive
+          .row.more-info
+            .title
+              font-family: 'Roboto Slab', serif
+              font-size: 16px
+              color: $grey
+              text-transform: uppercase
+            h3
+              text-transform: uppercase
+              font-size: 25px
+              color: white
+              padding-bottom: 25px
+            .text
+              font-size: 12px
+              color: $grey
+              line-height: 21px
+              letter-spacing: 3px
+              max-width: 85%
+              @media only screen and (max-width:1025px)
+                max-width: 60%
+              @media #{$small-only}
+                max-width: 100%
   .mainlidet1.goode
-    .goode1-slider-for
-    .goode1-slider-nav
+    .goode1-slider-for, .goode12-slider-for
+    .goode1-slider-nav, .goode12-slider-nav
       li
         height: 100vh
+        .bg-img
+          // background-size: contain
         .choose-language
           width: 100%
           height: 24px
@@ -84,12 +127,54 @@
               +translate(-50%,0)
               height: 1.5rem
               bottom: -1.5rem
-        .coffee-sort-popup
-          left: 30%
-        .popup-white-background
-          left: 30%
-        &.second
-          .coffee-sort-popup
-            left: 50%
-          .popup-white-background
-            left: 50%
+      &.goode1-slider-nav
+        .slick-dots
+          display: flex
+          justify-content: center
+          // list-style-type: none
+          flex-direction: column
+          height: 0
+          position: absolute
+          right: 20px
+          top: 50%
+          li
+            display: inline-block
+            button
+              display: block
+              cursor: pointer
+              width: 8px
+              height: 8px
+              border: 1px solid white
+              margin: 8px
+              text-indent: -9999px
+            &.slick-active
+              button
+                background-color: white
+      &.goode12-slider-nav
+        .slick-dots
+          display: flex
+          justify-content: center
+          height: 0
+          position: absolute
+          left: 45%
+          bottom: 5%
+          @media #{$small-only}
+            left: 32%
+          li
+            height: 2px
+            display: inline-block
+            button
+              display: block
+              cursor: pointer
+              width: 8px
+              height: 8px
+              border: 1px solid white
+              margin: 8px
+              text-indent: -9999px
+            &.slick-active
+              button
+                background-color: $orange
+
+//
+.go-down
+  color: white

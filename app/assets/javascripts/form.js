@@ -21,3 +21,7 @@ $(document).ready(function() {
 //   $index = $(this).index()
 //   $container = $(this).closest('.page-section')
 // });
+
+$('.go-down').click(function(){
+ $('html, body').animate({ scrollTop: (1100)}, 1000);
+})

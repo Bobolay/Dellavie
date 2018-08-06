@@ -10,12 +10,32 @@ $('.goode1-slider-nav').slick({
  slidesToScroll: 1,
  asNavFor: '.goode1-slider-for',
  arrows: false,
- // dots: true,
+ dots: true,
+ autoplay: true,
+ autoplaySpeed: 2000,
+});
+
+
+
+
+$('.goode12-slider-for').slick({
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ arrows: false,
+ fade: true,
+ asNavFor: '.goode1-slider-nav'
+});
+$('.goode12-slider-nav').slick({
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ asNavFor: '.goode1-slider-for',
+ arrows: false,
+ dots: true,
  // infinite: true,
  // speed: 500,
  // fade: true,
- // autoplay: false,
- // autoplaySpeed: 2000,
+ autoplay: true,
+ autoplaySpeed: 2000,
  // nextArrow: false,
  // prevArrow: false,
  // cssEase: 'linear'
