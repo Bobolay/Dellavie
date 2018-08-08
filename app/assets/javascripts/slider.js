@@ -1,7 +1,7 @@
 $('.goode1-slider-for').slick({
  slidesToShow: 1,
  slidesToScroll: 1,
- arrows: false,
+ arrows: true,
  fade: true,
  asNavFor: '.goode1-slider-nav'
 });
@@ -10,9 +10,12 @@ $('.goode1-slider-nav').slick({
  slidesToScroll: 1,
  asNavFor: '.goode1-slider-for',
  arrows: false,
+ arrows: true,
  dots: true,
  autoplay: true,
  autoplaySpeed: 2000,
+ nextArrow: $('.goode').find('.next-btn'),
+ prevArrow: $('.goode').find('.prev-btn')
 });
 
 

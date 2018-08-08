@@ -1,4 +1,21 @@
 .slider1, .slider2
+  .next-btn, .prev-btn
+    cursor: pointer
+    position: absolute
+    z-index: 3
+    top: 50vh
+    transition: .2s
+    &.next-btn
+      left: 15px
+      &:hover
+        left: 25px
+    &.prev-btn
+      right: 15px
+      &:hover
+        right: 25px
+    svg
+      width: 30px
+      height: 30px
   &.slider2
     padding: 50px 0
     .mainlidet1.goode
@@ -130,13 +147,17 @@
       &.goode1-slider-nav
         .slick-dots
           display: flex
-          justify-content: center
+          // justify-content: center
           // list-style-type: none
-          flex-direction: column
+          // flex-direction: column
           height: 0
           position: absolute
-          right: 20px
-          top: 50%
+          // right: 20px
+          // top: 50%
+          left: 45.5%
+          bottom: 10%
+          @media #{$small-only}
+            left: 34%
           li
             display: inline-block
             button
