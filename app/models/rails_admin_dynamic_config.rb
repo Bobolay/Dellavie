@@ -207,6 +207,93 @@ module RailsAdminDynamicConfig
         config.model Pages::Home do
           field :seo_tags
         end
+
+         config.include_models FirstPageTranslation
+         config.model FirstPageTranslation do
+           edit do
+             field :main_title
+             field :left_main_title
+             field :left_title
+             field :left_description
+             field :middle_main_title
+             field :middle_title
+             field :middle_description
+             field :right_main_title
+             field :right_title
+             field :right_description
+             field :translations, :globalize_tabs
+           end
+         end
+
+         config.model_translation MainSlide do
+          field :locale, :hidden
+          field :left_main_title
+          field :left_title
+          field :left_description
+          field :middle_main_title
+          field :middle_title
+          field :middle_description
+          field :right_main_title
+          field :right_title
+          field :right_description
+         end
+
+         config.include_models SecondPageTranslation
+         config.model SecondPageTranslation do
+           edit do
+             field :main_title
+             field :left_main_title
+             field :left_title
+             field :left_description
+             field :middle_main_title
+             field :middle_title
+             field :middle_description
+             field :right_main_title
+             field :right_title
+             field :right_description
+             field :translations, :globalize_tabs
+           end
+         end
+         config.model_translation MainSlide do
+          field :locale, :hidden
+          field :left_main_title
+          field :left_title
+          field :left_description
+          field :middle_main_title
+          field :middle_title
+          field :middle_description
+          field :right_main_title
+          field :right_title
+          field :right_description
+         end
+         config.include_models ThirdPageTranslation
+         config.model ThirdPageTranslation do
+           edit do
+             field :main_title
+             field :left_main_title
+             field :left_title
+             field :left_description
+             field :middle_main_title
+             field :middle_title
+             field :middle_description
+             field :right_main_title
+             field :right_title
+             field :right_description
+             field :translations, :globalize_tabs
+           end
+         end
+         config.model_translation MainSlide do
+          field :locale, :hidden
+          field :left_main_title
+          field :left_title
+          field :left_description
+          field :middle_main_title
+          field :middle_title
+          field :middle_description
+          field :right_main_title
+          field :right_title
+          field :right_description
+         end
       end
     end
   end
