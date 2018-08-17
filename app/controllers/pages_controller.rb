@@ -8,6 +8,12 @@ class PagesController < ApplicationController
 
 
     @main_slides = MainSlide.published.sort_by_sorting_position
+
+    @first_page = FirstPageTranslation.first_or_initialize
+    @second_page = SecondPageTranslation.first_or_initialize
+    @third_page = ThirdPageTranslation.first_or_initialize
+    @fourth_page = FourthPageTranslation.first_or_initialize
+    @fifth_page = FifthPageTranslation.first_or_initialize
   end
 
   private

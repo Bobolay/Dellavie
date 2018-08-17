@@ -26,33 +26,33 @@
           .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
             .row.more-info
               .large-6.medium-6.small-12.columns.countries-container.medium-push-6
-                p.title Is a blend of
+                p.title =@first_page.main_title
                 .row
                   .large-4.medium-4.small-4.columns.country
                     .country-map
                       = inline_svg "svg/Dellavie-countries-Brasil"
                     p.coffee-sort
-                      | Arabica
+                      =@first_page.left_main_title
                       br
-                      | Brazil
+                      =@first_page.first_country
                     .plus
                       = inline_svg "svg/Dellavie-plus.svg"
                   .large-4.medium-4.small-4.columns.country
                     .country-map
                       = inline_svg "svg/Dellavie-countries-Colombia.svg"
                     p.coffee-sort
-                      | Arabica
+                      =@first_page.middle_main_title
                       br
-                      | Brazil
+                      =@first_page.second_country
                     .plus
                       = inline_svg "svg/Dellavie-plus.svg"
                   .large-4.medium-4.small-4.columns.country
                     .country-map
                       = inline_svg "svg/Dellavie-countries-Ephiopia.svg"
                     p.coffee-sort
-                      | Arabica
+                      =@first_page.right_main_title
                       br
-                      | Brazil
+                      =@first_page.third_country
                     .plus
                       = inline_svg "svg/Dellavie-plus.svg"
 
@@ -68,8 +68,8 @@
               .right-arrow-container.slider-next
                 = inline_svg "svg/right-arrow.svg"
             .text
-              p.header arabica ethiopia
-              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+              p.header =@first_page.left_title
+              p.regular =@first_page.left_description
 
           .coffee-sort-popup
             .close-popup = inline_svg "svg/Dellavie-close.svg"
@@ -80,8 +80,8 @@
               .right-arrow-container.slider-next
                 = inline_svg "svg/right-arrow.svg"
             .text
-              p.header arabica ethiopia2
-              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+              p.header =@first_page.middle_title
+              p.regular =@first_page.middle_description
 
           .coffee-sort-popup
             .close-popup = inline_svg "svg/Dellavie-close.svg"
@@ -92,8 +92,8 @@
               .right-arrow-container.slider-next
                 = inline_svg "svg/right-arrow.svg"
             .text
-              p.header arabica ethiopia3
-              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+              p.header =@first_page.right_title
+              p.regular =@first_page.right_description
 
 
 
@@ -125,33 +125,33 @@
           .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
             .row.more-info
               .large-6.medium-6.small-12.columns.countries-container.medium-push-6
-                p.title Is a blend of
+                p.title =@second_page.main_title
                 .row
                   .large-4.medium-4.small-4.columns.country
                     .country-map
                       = inline_svg "svg/Dellavie-countries-Ephiopia.svg"
                     p.coffee-sort
-                      | Arabica
+                      =@second_page.left_main_title
                       br
-                      | Brazil
+                      =@second_page.first_country
                     .plus
                       = inline_svg "svg/Dellavie-plus.svg"
                   .large-4.medium-4.small-4.columns.country
                     .country-map
                       = inline_svg "svg/Dellavie-countries-Brasil"
                     p.coffee-sort
-                      | Arabica
+                      =@second_page.middle_main_title
                       br
-                      | Brazil
+                      =@second_page.second_country
                     .plus
                       = inline_svg "svg/Dellavie-plus.svg"
                   .large-4.medium-4.small-4.columns.country
                     .country-map
                       = inline_svg "svg/arabicaguatemala.svg"
                     p.coffee-sort
-                      | Arabica
+                      =@second_page.right_main_title
                       br
-                      | Brazil
+                      =@second_page.third_country
                     .plus
                       = inline_svg "svg/Dellavie-plus.svg"
 
@@ -170,8 +170,8 @@
               .right-arrow-container.slider-next
                 = inline_svg "svg/right-arrow.svg"
             .text
-              p.header arabica ethiopia3
-              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+              p.header =@second_page.left_title
+              p.regular =@second_page.left_description
 
           .coffee-sort-popup
             .close-popup = inline_svg "svg/Dellavie-close.svg"
@@ -182,8 +182,8 @@
               .right-arrow-container.slider-next
                 = inline_svg "svg/right-arrow.svg"
             .text
-              p.header arabica ethiopia4
-              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+              p.header =@second_page.middle_title
+              p.regular =@second_page.middle_description
 
           .coffee-sort-popup
             .close-popup = inline_svg "svg/Dellavie-close.svg"
@@ -194,8 +194,8 @@
               .right-arrow-container.slider-next
                 = inline_svg "svg/right-arrow.svg"
             .text
-              p.header arabica ethiopia5
-              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+              p.header =@second_page.right_title
+              p.regular =@second_page.right_description
 
 
       // slide 3
@@ -224,33 +224,33 @@
           .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
             .row.more-info
               .large-6.medium-6.small-12.columns.countries-container.medium-push-6
-                p.title Is a blend of
+                p.title =@third_page.main_title
                 .row
                   .large-4.medium-4.small-4.columns.country
                     .country-map
                       = inline_svg "svg/Dellavie-countries-Ephiopia.svg"
                     p.coffee-sort
-                      | Arabica
+                      =@third_page.left_main_title
                       br
-                      | Brazil
+                      =@third_page.first_country
                     .plus
                       = inline_svg "svg/Dellavie-plus.svg"
                   .large-4.medium-4.small-4.columns.country
                     .country-map.bg
                       = inline_svg "svg/arabica_colombia.svg"
                     p.coffee-sort
-                      | Arabica
+                      =@third_page.middle_main_title
                       br
-                      | Brazil
+                      =@third_page.second_country
                     .plus
                       = inline_svg "svg/Dellavie-plus.svg"
                   .large-4.medium-4.small-4.columns.country
                     .country-map
                       = inline_svg "svg/Dellavie-countries-India.svg"
                     p.coffee-sort
-                      | Arabica
+                      =@third_page.right_main_title
                       br
-                      | Brazil
+                      =@third_page.third_country
                     .plus
                       = inline_svg "svg/Dellavie-plus.svg"
 
@@ -269,8 +269,8 @@
               .right-arrow-container.slider-next
                 = inline_svg "svg/right-arrow.svg"
             .text
-              p.header arabica ethiopia7
-              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+              p.header =@third_page.left_title
+              p.regular =@third_page.left_description
 
           .coffee-sort-popup
             .close-popup = inline_svg "svg/Dellavie-close.svg"
@@ -281,8 +281,8 @@
               .right-arrow-container.slider-next
                 = inline_svg "svg/right-arrow.svg"
             .text
-              p.header arabica ethiopia8
-              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+              p.header =@third_page.middle_title
+              p.regular =@third_page.middle_description
 
           .coffee-sort-popup
             .close-popup = inline_svg "svg/Dellavie-close.svg"
@@ -293,8 +293,8 @@
               .right-arrow-container.slider-next
                 = inline_svg "svg/right-arrow.svg"
             .text
-              p.header arabica ethiopia9
-              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+              p.header =@third_page.right_title
+              p.regular =@third_page.right_description
 
 
 
@@ -325,33 +325,33 @@
           .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
             .row.more-info
               .large-6.medium-6.small-12.columns.countries-container.medium-push-6
-                p.title Is a blend of
+                p.title =@fourth_page.main_title
                 .row
                   .large-4.medium-4.small-4.columns.country
                     .country-map
                       = inline_svg "svg/arabicaburundi.svg"
                     p.coffee-sort
-                      | Arabica
+                      =@fourth_page.left_main_title
                       br
-                      | Brazil
+                      =@fourth_page.first_country
                     .plus
                       = inline_svg "svg/Dellavie-plus.svg"
                   .large-4.medium-4.small-4.columns.country
                     .country-map.smolle
                       = inline_svg "svg/robustamexico.svg"
                     p.coffee-sort
-                      | Arabica
+                      =@fourth_page.middle_main_title
                       br
-                      | Brazil
+                      =@fourth_page.second_country
                     .plus
                       = inline_svg "svg/Dellavie-plus.svg"
                   .large-4.medium-4.small-4.columns.country
                     .country-map
                       = inline_svg "svg/arabicaguatemala.svg"
                     p.coffee-sort
-                      | Arabica
+                      =@fourth_page.right_main_title
                       br
-                      | Brazil
+                      =@fourth_page.third_country
                     .plus
                       = inline_svg "svg/Dellavie-plus.svg"
 
@@ -370,8 +370,8 @@
               .right-arrow-container.slider-next
                 = inline_svg "svg/right-arrow.svg"
             .text
-              p.header arabica ethiopia10
-              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+              p.header =@fourth_page.left_title
+              p.regular =@fourth_page.left_description
 
           .coffee-sort-popup
             .close-popup = inline_svg "svg/Dellavie-close.svg"
@@ -382,8 +382,8 @@
               .right-arrow-container.slider-next
                 = inline_svg "svg/right-arrow.svg"
             .text
-              p.header arabica ethiopia11
-              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+              p.header =@fourth_page.middle_title
+              p.regular =@fourth_page.middle_description
 
           .coffee-sort-popup
             .close-popup = inline_svg "svg/Dellavie-close.svg"
@@ -394,8 +394,8 @@
               .right-arrow-container.slider-next
                 = inline_svg "svg/right-arrow.svg"
             .text
-              p.header arabica ethiopia12
-              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+              p.header =@fourth_page.right_title
+              p.regular =@fourth_page.right_description
 
       /slider 5
       li.united.fifth
@@ -423,15 +423,15 @@
           .large-9.large-centered.medium-10.medium-centered.small-12.small-centered.columns
             .row.more-info
               .large-6.medium-6.small-12.columns.countries-container.medium-push-6.country
-                p.title 100% arabica
+                p.title =@fifth_page.main_title
                 .row
                   .large-4.medium-4.small-4.columns.country
                     .country-map
                       = inline_svg "svg/arabicaguatemala.svg"
                     p.coffee-sort
-                      | Arabica
+                      =@fifth_page.left_main_title
                       br
-                      | Colombia
+                      =@fifth_page.first_country
                     .plus
                       = inline_svg "svg/Dellavie-plus.svg"
 
@@ -450,5 +450,5 @@
               .right-arrow-container.slider-next
                 = inline_svg "svg/right-arrow.svg"
             .text
-              p.header arabica ethiopia13
-              p.regular Ethiopia Sidamo taste is characterized by a delicate acidity and a slightly more intense bitterness, lots of sweet tinctures and a very low salinity. In the aroma of coffee experts allocate bergamot notes, apricot and bilberry tones as well as the tinctures of vanilla and cocoa. Ethiopia Sidamo aftertaste is characterized by the tinctures of aromas of toasted bread, caramel, rose and fresh creams. The drink is thick, with a long aftertaste. The aroma is delicate, brightly distinct, with a fruit tincture. It belongs to soft coffee varieties. The experts distinguish in Ethiopia Sidamo a special wine taste with a fruity tincture, more distinct and saturated in comparison with other Ethiopian varieties.
+              p.header =@fifth_page.left_title
+              p.regular =@fifth_page.left_description

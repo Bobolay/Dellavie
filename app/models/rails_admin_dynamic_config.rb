@@ -210,89 +210,119 @@ module RailsAdminDynamicConfig
 
          config.include_models FirstPageTranslation
          config.model FirstPageTranslation do
-           edit do
-             field :main_title
-             field :left_main_title
-             field :left_title
-             field :left_description
-             field :middle_main_title
-             field :middle_title
-             field :middle_description
-             field :right_main_title
-             field :right_title
-             field :right_description
+           edit do             
              field :translations, :globalize_tabs
            end
+           navigation_label "Tanslations"
          end
 
-         config.model_translation MainSlide do
+         config.model_translation FirstPageTranslation do
           field :locale, :hidden
+          field :main_title
           field :left_main_title
+          field :first_country
           field :left_title
           field :left_description
           field :middle_main_title
+          field :second_country
           field :middle_title
           field :middle_description
           field :right_main_title
+          field :third_country
           field :right_title
           field :right_description
          end
 
          config.include_models SecondPageTranslation
          config.model SecondPageTranslation do
-           edit do
-             field :main_title
-             field :left_main_title
-             field :left_title
-             field :left_description
-             field :middle_main_title
-             field :middle_title
-             field :middle_description
-             field :right_main_title
-             field :right_title
-             field :right_description
+           edit do             
              field :translations, :globalize_tabs
            end
+           navigation_label "Tanslations"
          end
-         config.model_translation MainSlide do
+
+         config.model_translation SecondPageTranslation do
           field :locale, :hidden
+          field :main_title
           field :left_main_title
+          field :first_country
           field :left_title
           field :left_description
           field :middle_main_title
+          field :second_country
           field :middle_title
           field :middle_description
           field :right_main_title
+          field :third_country
           field :right_title
           field :right_description
          end
+
          config.include_models ThirdPageTranslation
          config.model ThirdPageTranslation do
-           edit do
-             field :main_title
-             field :left_main_title
-             field :left_title
-             field :left_description
-             field :middle_main_title
-             field :middle_title
-             field :middle_description
-             field :right_main_title
-             field :right_title
-             field :right_description
+           edit do             
              field :translations, :globalize_tabs
            end
+           navigation_label "Tanslations"
          end
-         config.model_translation MainSlide do
+
+         config.model_translation ThirdPageTranslation do
           field :locale, :hidden
+          field :main_title
           field :left_main_title
+          field :first_country
           field :left_title
           field :left_description
           field :middle_main_title
+          field :second_country
           field :middle_title
           field :middle_description
           field :right_main_title
+          field :third_country
           field :right_title
           field :right_description
+         end
+
+         config.include_models FourthPageTranslation
+         config.model FourthPageTranslation do
+           edit do             
+             field :translations, :globalize_tabs
+           end
+           navigation_label "Tanslations"
+         end
+         
+         config.model_translation FourthPageTranslation do
+          field :locale, :hidden
+          field :main_title
+          field :left_main_title
+          field :first_country
+          field :left_title
+          field :left_description
+          field :middle_main_title
+          field :second_country
+          field :middle_title
+          field :middle_description
+          field :right_main_title
+          field :third_country
+          field :right_title
+          field :right_description
+         end
+
+         config.include_models FifthPageTranslation
+         config.model FifthPageTranslation do
+           edit do             
+             field :translations, :globalize_tabs
+           end
+           navigation_label "Tanslations"
+         end
+         
+         config.model_translation FifthPageTranslation do
+          field :locale, :hidden
+          field :main_title
+          field :left_main_title
+          field :first_country
+          field :left_title
+          field :left_description          
          end
       end
     end
