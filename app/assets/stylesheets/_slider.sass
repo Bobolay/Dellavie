@@ -63,7 +63,9 @@
       li
         height: 100vh
         .bg-img
-          // background-size: contain
+          background-size: contain
+          // background-repeat: space
+          background-position: unset
         .choose-language
           width: 100%
           height: 24px
@@ -154,10 +156,16 @@
           position: absolute
           // right: 20px
           // top: 50%
-          left: 45.5%
+          left: 47%
           bottom: 10%
           @media #{$small-only}
             left: 34%
+          @media screen and  (max-width: 1366px)
+            position: absolute
+            right: 40px
+            top: 50%
+            transform: translate(0, -50%)
+            z-index: 3
           li
             display: inline-block
             button
