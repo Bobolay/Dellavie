@@ -88,7 +88,7 @@ gem 'rack-page_caching'
 
 gem 'require_reloader'
 
-gem 'puma'
+gem 'puma' , '~> 3.8.2'
 
 gem 'globalize'
 gem 'rails_admin_globalize_field'
