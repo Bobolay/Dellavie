@@ -141,7 +141,8 @@ Devise.setup do |config|
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
   # config.remember_for = 2.weeks
-config.secret_key = 'e86da9dc9a30de740e19f4abae4be9f4b74a1e889a3307538438d8383756ef7550377822d2ad1bb16644dd25365a47911810a837f2199c97c9e4407f385ba823'
+# config.secret_key = 'e86da9dc9a30de740e19f4abae4be9f4b74a1e889a3307538438d8383756ef7550377822d2ad1bb16644dd25365a47911810a837f2199c97c9e4407f385ba823'
+config.secret_key = '1d4dd8dc1dc8190a97f2e0f840cf7b7e2c260a102dbf5fe3a20a3fdd0cca9246f214727e17ed1f55dbcdb60630245f12e39e43ac7c0b61ff7a92ef7f7dbac29e'
   # Invalidates all the remember me tokens when the user signs out.
   config.expire_all_remember_me_on_sign_out = true
 
