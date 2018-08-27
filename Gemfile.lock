@@ -53,6 +53,10 @@ GEM
     bower-rails (0.11.0)
     builder (3.2.2)
     byebug (9.0.5)
+    carrierwave (1.2.3)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     ckeditor (4.2.0)
       cocaine
       orm_adapter (~> 0.5.0)
@@ -279,6 +283,7 @@ DEPENDENCIES
   acts-as-taggable-on
   bower-rails
   byebug
+  carrierwave (~> 1.0)
   ckeditor
   cms!
   coffee-rails (~> 4.1.0)

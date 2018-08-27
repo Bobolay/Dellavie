@@ -102,3 +102,5 @@ gem 'cms', github: "pkorenev/cms"
 
 
 gem "figaro"
+
+gem 'carrierwave', '~> 1.0'
