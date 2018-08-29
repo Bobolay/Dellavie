@@ -372,6 +372,57 @@ module RailsAdminDynamicConfig
           field :title
           field :description
          end
+
+         config.include_models PageThree
+         config.model PageThree do
+           edit do             
+             field :translations, :globalize_tabs              
+           end
+           navigation_label "Second slider"
+         end
+
+         config.model_translation PageThree do
+          field :locale, :hidden
+          field :head_title
+          field :head_main_title
+          field :main_title
+          field :title
+          field :description
+         end
+
+         config.include_models PageFour
+         config.model PageFour do
+           edit do             
+             field :translations, :globalize_tabs              
+           end
+           navigation_label "Second slider"
+         end
+
+         config.model_translation PageFour do
+          field :locale, :hidden
+          field :head_title
+          field :head_main_title
+          field :main_title
+          field :title
+          field :description
+         end
+
+         config.include_models PageFive
+         config.model PageFive do
+           edit do             
+             field :translations, :globalize_tabs              
+           end
+           navigation_label "Second slider"
+         end
+
+         config.model_translation PageFive do
+          field :locale, :hidden
+          field :head_title
+          field :head_main_title
+          field :main_title
+          field :title
+          field :description
+         end
       end
     end
   end

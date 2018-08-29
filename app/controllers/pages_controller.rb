@@ -14,6 +14,12 @@ class PagesController < ApplicationController
     @third_page = ThirdPageTranslation.first_or_initialize
     @fourth_page = FourthPageTranslation.first_or_initialize
     @fifth_page = FifthPageTranslation.first_or_initialize
+
+    @page_one   = PageOne.first_or_initialize
+    @page_two   = PageTwo.first_or_initialize
+    @page_three = PageThree.first_or_initialize
+    @page_four  = PageFour.first_or_initialize
+    @page_five  = PageFive.first_or_initialize
   end
 
   private
