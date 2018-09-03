@@ -63,9 +63,9 @@
       li
         height: 100vh
         .bg-img
-          background-size: contain
+          // background-size: contain
           // background-repeat: space
-          background-position: unset
+          // background-position: unset
         .choose-language
           width: 100%
           height: 24px
@@ -101,6 +101,9 @@
             background-position: center
             @media only screen and (min-width:1440px)
               width: 85%
+              height: 120%
+            @media screen and  (max-width: 1366px)
+              width: 91%
               height: 120%
         .coffee-header
           position: relative
@@ -164,8 +167,10 @@
             position: absolute
             right: 40px
             top: 50%
+            left: 95%
             transform: translate(0, -50%)
             z-index: 3
+            flex-direction: column
           li
             display: inline-block
             button
