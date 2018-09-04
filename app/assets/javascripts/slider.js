@@ -37,11 +37,12 @@ $('.goode12-slider-nav').slick({
  // infinite: true,
  // speed: 500,
  // fade: true,
+ arrows: true,
  autoplay: true,
  autoplaySpeed: 2000,
  // nextArrow: false,
  // prevArrow: false,
  // cssEase: 'linear'
- // nextArrow: $('.mainlidet1').find('.next-btn'),
- // prevArrow: $('.mainlidet1').find('.prev-btn')
+ nextArrow: $('.slider-smolle').find('.next-btn2'),
+ prevArrow: $('.slider-smolle').find('.prev-btn2')
 });

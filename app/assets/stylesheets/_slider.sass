@@ -1,5 +1,5 @@
 .slider1, .slider2
-  .next-btn, .prev-btn
+  .next-btn, .prev-btn,
     cursor: pointer
     position: absolute
     z-index: 3
@@ -17,7 +17,25 @@
       width: 30px
       height: 30px
   &.slider2
+    position: relative
     padding: 50px 0
+    .next-btn2, .prev-btn2,
+      cursor: pointer
+      position: absolute
+      z-index: 3
+      top: 50vh
+      transition: .2s
+      &.next-btn2
+        left: 15px
+        &:hover
+          left: 25px
+      &.prev-btn2
+        right: 15px
+        &:hover
+          right: 25px
+      svg
+        width: 30px
+        height: 30px
     .mainlidet1.goode
       .goode12-slider-nav
         li
@@ -62,6 +80,8 @@
     .goode1-slider-nav, .goode12-slider-nav
       li
         height: 100vh
+        @media screen and  (max-width: 1366px)
+          height: 120vh
         .bg-img
           // background-size: contain
           // background-repeat: space
@@ -103,7 +123,7 @@
               width: 85%
               height: 120%
             @media screen and  (max-width: 1366px)
-              width: 91%
+              width: 81%
               height: 120%
         .coffee-header
           position: relative
