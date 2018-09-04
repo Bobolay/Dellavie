@@ -163,6 +163,7 @@
           bottom: 10%
           @media #{$small-only}
             left: 34%
+            // display: none
           @media screen and  (max-width: 1366px)
             position: absolute
             right: 40px
@@ -181,6 +182,8 @@
               border: 1px solid white
               margin: 8px
               text-indent: -9999px
+              @media screen and  (max-width: 1025px)
+                display: none
             &.slick-active
               button
                 background-color: white
