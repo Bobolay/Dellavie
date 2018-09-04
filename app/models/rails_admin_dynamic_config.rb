@@ -8,6 +8,7 @@ def host?(*hosts)
   hosts.include? REQUEST_HOST
 end
 
+
 module RailsAdminDynamicConfig
   class << self
     def configure_rails_admin(initial = true)
@@ -212,8 +213,11 @@ module RailsAdminDynamicConfig
          config.model FirstPageTranslation do
            edit do             
              field :translations, :globalize_tabs
+             field :first_image
+             field :second_image 
+             field :third_image              
            end
-           navigation_label "Tanslations"
+           navigation_label "First slider"
          end
 
          config.model_translation FirstPageTranslation do
@@ -224,7 +228,7 @@ module RailsAdminDynamicConfig
           field :left_title
           field :left_description
           field :middle_main_title
-          field :second_country
+          field :second_countr
           field :middle_title
           field :middle_description
           field :right_main_title
@@ -237,8 +241,11 @@ module RailsAdminDynamicConfig
          config.model SecondPageTranslation do
            edit do             
              field :translations, :globalize_tabs
+             field :first_image
+             field :second_image 
+             field :third_image
            end
-           navigation_label "Tanslations"
+           navigation_label "First slider"
          end
 
          config.model_translation SecondPageTranslation do
@@ -262,8 +269,11 @@ module RailsAdminDynamicConfig
          config.model ThirdPageTranslation do
            edit do             
              field :translations, :globalize_tabs
+             field :first_image
+             field :second_image 
+             field :third_image
            end
-           navigation_label "Tanslations"
+           navigation_label "First slider"
          end
 
          config.model_translation ThirdPageTranslation do
@@ -287,8 +297,11 @@ module RailsAdminDynamicConfig
          config.model FourthPageTranslation do
            edit do             
              field :translations, :globalize_tabs
+             field :first_image
+             field :second_image 
+             field :third_image
            end
-           navigation_label "Tanslations"
+           navigation_label "First slider"
          end
          
          config.model_translation FourthPageTranslation do
@@ -312,8 +325,9 @@ module RailsAdminDynamicConfig
          config.model FifthPageTranslation do
            edit do             
              field :translations, :globalize_tabs
+             field :first_image
            end
-           navigation_label "Tanslations"
+           navigation_label "First slider"
          end
          
          config.model_translation FifthPageTranslation do
@@ -323,6 +337,91 @@ module RailsAdminDynamicConfig
           field :first_country
           field :left_title
           field :left_description          
+         end
+
+         config.include_models PageOne
+         config.model PageOne do
+           edit do             
+             field :translations, :globalize_tabs              
+           end
+           navigation_label "Second slider"
+         end
+
+         config.model_translation PageOne do
+          field :locale, :hidden
+          field :head_title
+          field :head_main_title
+          field :main_title
+          field :title
+          field :description
+         end
+
+         config.include_models PageTwo
+         config.model PageTwo do
+           edit do             
+             field :translations, :globalize_tabs              
+           end
+           navigation_label "Second slider"
+         end
+
+         config.model_translation PageTwo do
+          field :locale, :hidden
+          field :head_title
+          field :head_main_title
+          field :main_title
+          field :title
+          field :description
+         end
+
+         config.include_models PageThree
+         config.model PageThree do
+           edit do             
+             field :translations, :globalize_tabs              
+           end
+           navigation_label "Second slider"
+         end
+
+         config.model_translation PageThree do
+          field :locale, :hidden
+          field :head_title
+          field :head_main_title
+          field :main_title
+          field :title
+          field :description
+         end
+
+         config.include_models PageFour
+         config.model PageFour do
+           edit do             
+             field :translations, :globalize_tabs              
+           end
+           navigation_label "Second slider"
+         end
+
+         config.model_translation PageFour do
+          field :locale, :hidden
+          field :head_title
+          field :head_main_title
+          field :main_title
+          field :title
+          field :description
+         end
+
+         config.include_models PageFive
+         config.model PageFive do
+           edit do             
+             field :translations, :globalize_tabs              
+           end
+           navigation_label "Second slider"
+         end
+
+         config.model_translation PageFive do
+          field :locale, :hidden
+          field :head_title
+          field :head_main_title
+          field :main_title
+          field :title
+          field :description
          end
       end
     end
