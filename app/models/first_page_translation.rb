@@ -8,8 +8,7 @@ class FirstPageTranslation < ActiveRecord::Base
 	mount_uploader :second_image
 	mount_uploader :third_image
 
-	has_cache
-  def cache_instances
-    [Pages.home.urls_for_locales]
-  end
+	has_cache do
+	  pages :home
+        end		
 end

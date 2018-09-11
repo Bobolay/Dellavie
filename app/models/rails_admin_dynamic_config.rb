@@ -228,7 +228,7 @@ module RailsAdminDynamicConfig
           field :left_title
           field :left_description
           field :middle_main_title
-          field :second_countr
+          field :second_country
           field :middle_title
           field :middle_description
           field :right_main_title
