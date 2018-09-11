@@ -3,8 +3,7 @@ class PageFour < ActiveRecord::Base
 	:main_title, :title, :description
 	accepts_nested_attributes_for :translations, allow_destroy: true	
 
-	has_cache
-  def cache_instances
-    [Pages.home.urls_for_locales]
-  end
+	has_cache do
+	  pages :home
+    end	
 end

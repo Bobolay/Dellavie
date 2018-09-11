@@ -1,4 +1,4 @@
-class FirstPageTranslation < ActiveRecord::Base
+ class FirstPageTranslation < ActiveRecord::Base
 	translates :main_title, :left_main_title, :left_title, :left_description,
      :middle_main_title, :middle_title, :middle_description,
      :right_main_title, :right_title, :right_description, :first_country,
@@ -10,5 +10,5 @@ class FirstPageTranslation < ActiveRecord::Base
 
 	has_cache do
 	  pages :home
-        end		
+    end		
 end

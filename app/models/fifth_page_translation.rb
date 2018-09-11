@@ -4,8 +4,7 @@ class FifthPageTranslation < ActiveRecord::Base
 	accepts_nested_attributes_for :translations, allow_destroy: true
 	mount_uploader :first_image
 
-	has_cache
-  def cache_instances
-    [Pages.home.urls_for_locales]
-  end
+	has_cache do
+	  pages :home
+    end	
 end
