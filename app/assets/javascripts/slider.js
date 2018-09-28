@@ -12,8 +12,9 @@ $('.goode1-slider-nav').slick({
  arrows: false,
  arrows: true,
  dots: true,
- autoplay: false,
- // autoplaySpeed: 2000,
+ autoplay: true,
+ autoplaySpeed: 3000,
+ pauseOnHover:false,
  nextArrow: $('.goode').find('.next-btn'),
  prevArrow: $('.goode').find('.prev-btn')
 });
@@ -38,8 +39,9 @@ $('.goode12-slider-nav').slick({
  // speed: 500,
  // fade: true,
  arrows: true,
- autoplay: false,
- autoplaySpeed: 2000,
+ autoplay: true,
+ autoplaySpeed: 3000,
+ pauseOnHover:false,
  // nextArrow: false,
  // prevArrow: false,
  // cssEase: 'linear'
