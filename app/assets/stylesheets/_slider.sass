@@ -45,11 +45,13 @@
           .banner-inner-header
             color: $orange
             text-align: left
+            @media #{$small-only}
+              text-align: center
             p
               font-size: 72px
               font-family: 'Roboto Slab', serif
               @media #{$small-only}
-                font-size: 45px
+                font-size: 30px
             span
               top: -5rem
               font-size: 72px
