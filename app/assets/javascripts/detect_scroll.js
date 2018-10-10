@@ -15,7 +15,7 @@ $(document).on("ready", function(){
     });
 
     //     F I R E F O X     D E T E C T
-    
+
     $(window).bind('DOMMouseScroll', function(e){
         if ($('.coffee-sort-popup.visible').length) {
             return
@@ -61,7 +61,7 @@ $(document).on("ready", function(){
                 delay('custom_scroll', function(){custom_scroll("down");}, 1000, true, false)
             }
         },
-     
+
         //Default is 75px, set to 0 for demo so any distance triggers swipe
        threshold:0,
        allowPageScroll: true,
@@ -70,3 +70,7 @@ $(document).on("ready", function(){
 
 });
 
+$(".logo").click(function() {
+  var scroll_pos=(0);
+   $('html, body').animate({scrollTop:(scroll_pos)}, '2000');
+ });
