@@ -12,7 +12,7 @@ $('.goode1-slider-nav').slick({
  arrows: false,
  arrows: true,
  dots: true,
- autoplay: false,
+ autoplay: true,
  autoplaySpeed: 3000,
  pauseOnHover:false,
  nextArrow: $('.goode').find('.next-btn'),
