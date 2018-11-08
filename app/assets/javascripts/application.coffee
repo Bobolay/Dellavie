@@ -10,6 +10,7 @@
 #= require plugins/global
 #= require plugins/clickout
 #= require plugins/slick.min
+#= require plugins/google.Analytics.min
 
 #= require main
 
