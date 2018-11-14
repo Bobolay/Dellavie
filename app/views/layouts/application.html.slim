@@ -4,7 +4,7 @@ html
     meta charset="utf-8"
     = seo_tags
     meta name="viewport" content="width=device-width, initial-scale=1.0"
-    
+
     = csrf_meta_tags
     link href=asset_path("favicon/dellavie-favicon-16x16.svg") rel="icon" type="image/svg+xml"
     link href=asset_path("favicon/dellavie-favicon-256x256.png") rel="icon" sizes="256x256" type="image/png"
@@ -12,3 +12,4 @@ html
   body
     = yield
     = javascript_include_tag "application", 'data-turbolinks-track' => true
+    script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-89374502-1"
