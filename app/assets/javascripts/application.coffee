@@ -20,6 +20,7 @@
 
 #= require custom_scroll
 #= require detect_scroll
+#= require google
 
 #= require popup
 
