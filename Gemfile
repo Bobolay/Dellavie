@@ -104,3 +104,4 @@ gem 'cms', github: "pkorenev/cms"
 gem "figaro"
 
 gem 'carrierwave', '~> 1.0'
+gem 'pry-rails', :group => :development

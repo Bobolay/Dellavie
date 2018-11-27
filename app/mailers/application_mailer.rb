@@ -7,7 +7,7 @@ class ApplicationMailer < ActionMailer::Base
 
     mail(
         template_name: "order",
-        to: receivers("order"),
+        to: "triumf.torg.sale@gmail.com",
         from: "Dellavie <#{ActionMailer::Base.smtp_settings[:user_name]}>",
         subject: "New order"
     )
