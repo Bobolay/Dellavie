@@ -13,6 +13,8 @@
 
 #= require main
 
+#= require form_val
+
 #= require form
 
 #= require plugins/jquery.bxslider

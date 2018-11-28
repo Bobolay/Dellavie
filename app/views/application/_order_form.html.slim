@@ -16,29 +16,29 @@ form method="post" action="/#{I18n.locale}/order"
       - 5.times do |i|
         .option
           = t("home.contact-form.user_position.option-#{i+1}")
-
-  .group
-    input type="text" name="order[name]"
-    span.bar
-    label
-      = t("home.contact-form.name.label")
-  .group
-    input type="text" name="order[email]"
-    span.bar
-    label
-      = t("home.contact-form.email.label")
-  .group
-    input type="text" name="order[phone]"
-    span.bar
-    label
-      = t("home.contact-form.phone.label")
-  .group
-    textarea rows="2" name="order[message]"
-    span.bar
-    label
-      = t("home.contact-form.message.label")
-  button.button type="submit"
-    span
-      = t("home.contact-form.submit-button")
-    .line-left
-    .line-right
+  #form
+    .group
+      input#lol type="text" name="order[name]" require =""
+      span.bar
+      label
+        = t("home.contact-form.name.label")
+    .group
+      input#lol2 type="text" name="order[email]" require =""
+      span.bar
+      label
+        = t("home.contact-form.email.label")
+    .group
+      input#lol3 type="text" name="order[phone]" require =""
+      span.bar
+      label
+        = t("home.contact-form.phone.label")
+    .group
+      textarea rows="2" name="order[message]"
+      span.bar
+      label
+        = t("home.contact-form.message.label")
+    button.button type="submit"
+      span
+        = t("home.contact-form.submit-button")
+      .line-left
+      .line-right
